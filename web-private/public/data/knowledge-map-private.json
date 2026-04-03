@@ -1,0 +1,1223 @@
+{
+  "meta": {
+    "owner": "Trenton Richards",
+    "last_updated": "2026-04-02",
+    "total_sessions": 8,
+    "schema_version": "1.0",
+    "visibility": "private"
+  },
+  "nodes": [
+    {
+      "id": "domain-ai-ml",
+      "label": "AI / ML Engineering",
+      "type": "domain",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 7,
+      "history": [
+        { "date": "2026-03-28", "score": 5 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["python", "ollama", "groq", "llm-prompting", "multi-agent", "rag", "whisper", "autotrader", "clipper", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "domain-trading",
+      "label": "Trading & Finance",
+      "type": "domain",
+      "domain": "trading",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 3 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["python", "alpaca-api", "bracket-orders", "paper-trading", "autotrader"],
+      "visibility": "public"
+    },
+    {
+      "id": "domain-web",
+      "label": "Web Development",
+      "type": "domain",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 5,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["typescript", "react", "nextjs", "tailwind", "vercel", "cloudflare", "portfolio-website", "clock-in", "knowledge-map-project", "css-animations", "svg-fundamentals", "ui-ux-design"],
+      "visibility": "public"
+    },
+    {
+      "id": "domain-video",
+      "label": "Video & Automation",
+      "type": "domain",
+      "domain": "video",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 5 }
+      ],
+      "connections": ["python", "ffmpeg", "yt-dlp", "whisper", "clipper"],
+      "visibility": "public"
+    },
+    {
+      "id": "domain-strategy",
+      "label": "Strategy & Business",
+      "type": "domain",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 7 }
+      ],
+      "connections": ["ai-research", "business-strategy"],
+      "visibility": "public"
+    },
+    {
+      "id": "domain-systems",
+      "label": "Systems & DevOps",
+      "type": "domain",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 3 },
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["git", "bash", "docker", "linux", "claude-code"],
+      "visibility": "public"
+    },
+    {
+      "id": "domain-personal",
+      "label": "Personal",
+      "type": "domain",
+      "domain": "personal",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 7 }
+      ],
+      "connections": ["belief-growth", "belief-discipline", "belief-aesthetics", "belief-health", "goal-financial-freedom", "goal-entrepreneurship", "goal-family"],
+      "visibility": "private"
+    },
+    {
+      "id": "domain-finance",
+      "label": "Finance & Wealth",
+      "type": "domain",
+      "domain": "finance",
+      "score": 2,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 2 }
+      ],
+      "connections": ["finance-current-state", "goal-financial-freedom", "goal-investing"],
+      "visibility": "private"
+    },
+    {
+      "id": "domain-interests",
+      "label": "Interests & Lifestyle",
+      "type": "domain",
+      "domain": "interests",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["interest-gym", "interest-skiing", "interest-outdoors", "interest-sports", "interest-fashion", "interest-travel"],
+      "visibility": "private"
+    },
+    {
+      "id": "domain-network",
+      "label": "Network & People",
+      "type": "domain",
+      "domain": "network",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["person-dad", "person-mom", "person-chad", "person-katie", "person-gracie"],
+      "visibility": "private"
+    },
+    {
+      "id": "belief-growth",
+      "label": "Growth Mindset",
+      "type": "belief",
+      "domain": "personal",
+      "score": 9,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 9 }
+      ],
+      "connections": ["domain-personal", "belief-discipline", "goal-skills", "interest-gym"],
+      "notes": "Core operating philosophy. Constant improvement across all domains — physical, mental, financial, social. Not aspirational, actually lived.",
+      "visibility": "private"
+    },
+    {
+      "id": "belief-discipline",
+      "label": "Discipline & Consistency",
+      "type": "belief",
+      "domain": "personal",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-personal", "belief-growth", "interest-gym", "goal-financial-freedom"],
+      "notes": "Consistency in good habits over motivation. Shows up in gym, coding, building projects.",
+      "visibility": "private"
+    },
+    {
+      "id": "belief-aesthetics",
+      "label": "Aesthetics Matter",
+      "type": "belief",
+      "domain": "personal",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-personal", "interest-fashion", "interest-gym", "ui-ux-design"],
+      "notes": "Believes aesthetics are important in all areas — physical appearance, design, environments. Has a good eye, developing the technical ability to match.",
+      "visibility": "private"
+    },
+    {
+      "id": "belief-health",
+      "label": "Health is Foundational",
+      "type": "belief",
+      "domain": "personal",
+      "score": 9,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 9 }
+      ],
+      "connections": ["domain-personal", "interest-gym", "belief-growth", "belief-discipline"],
+      "notes": "Mental and physical health are non-negotiable. Views them as essential to living a full life, not optional extras.",
+      "visibility": "private"
+    },
+    {
+      "id": "goal-financial-freedom",
+      "label": "Financial Independence",
+      "type": "goal",
+      "domain": "personal",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-personal", "domain-finance", "goal-entrepreneurship", "goal-investing"],
+      "notes": "Short term: enough cash flow to support a leisure lifestyle as a single young adult — eat well, travel occasionally, upgrade wardrobe. Not extravagant, just free. Currently dependent on parents which he dislikes.",
+      "visibility": "private"
+    },
+    {
+      "id": "goal-entrepreneurship",
+      "label": "Build & Own Businesses",
+      "type": "goal",
+      "domain": "personal",
+      "score": 4,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["domain-personal", "goal-financial-freedom", "goal-investing", "domain-strategy"],
+      "notes": "Long term goal: start own businesses, work for himself, automate income streams. Wants to be the one holding the equity.",
+      "visibility": "private"
+    },
+    {
+      "id": "goal-investing",
+      "label": "Aggressive Investing",
+      "type": "goal",
+      "domain": "finance",
+      "score": 2,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 2 }
+      ],
+      "connections": ["domain-finance", "goal-financial-freedom", "goal-entrepreneurship"],
+      "notes": "Wants to invest aggressively once capital exists. Previously had investments, sold last summer for rent/school/independence.",
+      "visibility": "private"
+    },
+    {
+      "id": "goal-skills",
+      "label": "Become a Weapon in the Workforce",
+      "type": "goal",
+      "domain": "personal",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-personal", "domain-ai-ml", "domain-web", "belief-growth"],
+      "notes": "Learning as many skills as possible, especially software creation and AI fluency. Urgent — internship search, semester ends May 2026.",
+      "visibility": "private"
+    },
+    {
+      "id": "goal-family",
+      "label": "Marriage & Family",
+      "type": "goal",
+      "domain": "personal",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-personal", "goal-financial-freedom", "goal-entrepreneurship"],
+      "notes": "Long term: get married, wealthy enough to support a family, buy a house. Currently focused on dating and being more social.",
+      "visibility": "private"
+    },
+    {
+      "id": "goal-travel",
+      "label": "Travel the World",
+      "type": "goal",
+      "domain": "interests",
+      "score": 4,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["domain-interests", "interest-travel", "goal-financial-freedom"],
+      "notes": "Wants to travel the world for a period. Currently constrained by finances.",
+      "visibility": "private"
+    },
+    {
+      "id": "finance-current-state",
+      "label": "Current Financial State",
+      "type": "concept",
+      "domain": "finance",
+      "score": 2,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 2 }
+      ],
+      "connections": ["domain-finance", "goal-financial-freedom"],
+      "notes": "~$1k in bank. No income. Parents cover rent, food, essentials. Tuition covered by FAFSA. Other expenses self-funded. Dad is a dentist (affluent). Two siblings recently married = parents have more to give. Sold investments last summer for rent/school. Dislikes dependence on parents.",
+      "visibility": "private"
+    },
+    {
+      "id": "interest-gym",
+      "label": "Gym & Fitness",
+      "type": "interest",
+      "domain": "interests",
+      "score": 9,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 9 }
+      ],
+      "connections": ["domain-interests", "belief-health", "belief-aesthetics", "belief-discipline"],
+      "notes": "Major priority. Goal: best physical and aesthetic shape of his life. Consistent habit.",
+      "visibility": "private"
+    },
+    {
+      "id": "interest-skiing",
+      "label": "Skiing",
+      "type": "interest",
+      "domain": "interests",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 7 }
+      ],
+      "connections": ["domain-interests", "interest-outdoors"],
+      "notes": "Winter sport of choice. Lives in Utah — good access.",
+      "visibility": "private"
+    },
+    {
+      "id": "interest-outdoors",
+      "label": "Outdoors & Adventure",
+      "type": "interest",
+      "domain": "interests",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-interests", "interest-skiing", "interest-sports"],
+      "notes": "Hiking, camping, action/adrenaline sports. Anything that gets him outside and moving. Skydiving is on the list when funds allow.",
+      "visibility": "private"
+    },
+    {
+      "id": "interest-sports",
+      "label": "Sports & Athletics",
+      "type": "interest",
+      "domain": "interests",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-interests", "interest-outdoors", "interest-gym"],
+      "notes": "Basketball, pickleball, running — just about any sport or physical activity. Social and competitive.",
+      "visibility": "private"
+    },
+    {
+      "id": "interest-fashion",
+      "label": "Fashion & Style",
+      "type": "interest",
+      "domain": "interests",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-interests", "belief-aesthetics", "goal-financial-freedom"],
+      "notes": "Wants to upgrade wardrobe. Currently limited by finances. Tied to aesthetics belief.",
+      "visibility": "private"
+    },
+    {
+      "id": "interest-travel",
+      "label": "Travel",
+      "type": "interest",
+      "domain": "interests",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 7 }
+      ],
+      "connections": ["domain-interests", "goal-travel", "goal-financial-freedom"],
+      "notes": "Wants to travel — currently constrained by college student finances.",
+      "visibility": "private"
+    },
+    {
+      "id": "person-dad",
+      "label": "Dad (Richards)",
+      "type": "person",
+      "domain": "network",
+      "score": 9,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 9 }
+      ],
+      "connections": ["domain-network", "person-mom", "person-chad", "person-katie", "person-gracie", "finance-current-state"],
+      "notes": "Dentist. Affluent. Currently supporting Trenton financially (rent, food, essentials). Two siblings got married so more support available now.",
+      "visibility": "private"
+    },
+    {
+      "id": "person-mom",
+      "label": "Mom (Richards)",
+      "type": "person",
+      "domain": "network",
+      "score": 9,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 9 }
+      ],
+      "connections": ["domain-network", "person-dad"],
+      "visibility": "private"
+    },
+    {
+      "id": "person-chad",
+      "label": "Chad Richards",
+      "type": "person",
+      "domain": "network",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 7 }
+      ],
+      "connections": ["domain-network", "person-dad", "person-mom"],
+      "notes": "Sibling. Recently married.",
+      "visibility": "private"
+    },
+    {
+      "id": "person-katie",
+      "label": "Katie Richards",
+      "type": "person",
+      "domain": "network",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 7 }
+      ],
+      "connections": ["domain-network", "person-dad", "person-mom"],
+      "notes": "Sibling. Recently married.",
+      "visibility": "private"
+    },
+    {
+      "id": "person-gracie",
+      "label": "Gracie Richards",
+      "type": "person",
+      "domain": "network",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 7 }
+      ],
+      "connections": ["domain-network", "person-dad", "person-mom"],
+      "notes": "Sibling.",
+      "visibility": "private"
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 7,
+      "history": [
+        { "date": "2026-03-28", "score": 7 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-ai-ml", "domain-trading", "domain-video", "autotrader", "clipper", "job-search-pipeline", "lead-generator", "web-scraping"],
+      "visibility": "public"
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["react", "nextjs", "portfolio-website", "clock-in", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["typescript", "nextjs", "tailwind", "portfolio-website", "clock-in"],
+      "visibility": "public"
+    },
+    {
+      "id": "nextjs",
+      "label": "Next.js",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["react", "typescript", "tailwind", "vercel", "portfolio-website", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "tailwind",
+      "label": "Tailwind CSS",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 5 }
+      ],
+      "connections": ["react", "nextjs", "portfolio-website"],
+      "visibility": "public"
+    },
+    {
+      "id": "git",
+      "label": "Git",
+      "type": "skill",
+      "domain": "systems",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 6 }
+      ],
+      "connections": ["domain-systems", "python"],
+      "visibility": "public"
+    },
+    {
+      "id": "bash",
+      "label": "Bash / Shell",
+      "type": "skill",
+      "domain": "systems",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-systems", "autotrader", "cron-jobs"],
+      "visibility": "public"
+    },
+    {
+      "id": "web-scraping",
+      "label": "Web Scraping",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-01",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 5 },
+        { "date": "2026-04-01", "score": 6 }
+      ],
+      "connections": ["python", "lead-generator", "job-search-pipeline"],
+      "visibility": "public"
+    },
+    {
+      "id": "d3js",
+      "label": "D3.js",
+      "type": "skill",
+      "domain": "web",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-web", "typescript", "knowledge-map-project", "knowledge-graphs"],
+      "visibility": "public"
+    },
+    {
+      "id": "css-animations",
+      "label": "CSS Animations",
+      "type": "skill",
+      "domain": "web",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-web", "tailwind", "knowledge-map-project", "svg-fundamentals", "ui-ux-design"],
+      "visibility": "public"
+    },
+    {
+      "id": "svg-fundamentals",
+      "label": "SVG",
+      "type": "skill",
+      "domain": "web",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-web", "d3js", "knowledge-map-project", "css-animations"],
+      "visibility": "public"
+    },
+    {
+      "id": "ui-ux-design",
+      "label": "UI / UX Design",
+      "type": "concept",
+      "domain": "web",
+      "score": 2,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 2 }
+      ],
+      "connections": ["domain-web", "css-animations", "knowledge-map-project", "portfolio-website", "belief-aesthetics"],
+      "visibility": "public"
+    },
+    {
+      "id": "claude-code",
+      "label": "Claude Code",
+      "type": "tool",
+      "domain": "systems",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 7,
+      "history": [
+        { "date": "2026-03-28", "score": 6 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-systems", "domain-ai-ml", "obsidian-pkm", "memory-system"],
+      "visibility": "public"
+    },
+    {
+      "id": "ollama",
+      "label": "Ollama",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-01",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-04-01", "score": 5 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-ai-ml", "autotrader", "job-search-pipeline", "llm-prompting"],
+      "visibility": "public"
+    },
+    {
+      "id": "groq",
+      "label": "Groq API",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-01",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-01", "score": 5 }
+      ],
+      "connections": ["domain-ai-ml", "job-search-pipeline", "ollama"],
+      "visibility": "public"
+    },
+    {
+      "id": "alpaca-api",
+      "label": "Alpaca API",
+      "type": "tool",
+      "domain": "trading",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-trading", "python", "autotrader", "bracket-orders", "paper-trading"],
+      "visibility": "public"
+    },
+    {
+      "id": "vercel",
+      "label": "Vercel",
+      "type": "tool",
+      "domain": "web",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["nextjs", "cloudflare", "portfolio-website", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "cloudflare",
+      "label": "Cloudflare DNS",
+      "type": "tool",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["vercel", "portfolio-website", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "obsidian-pkm",
+      "label": "Obsidian / PKM",
+      "type": "tool",
+      "domain": "systems",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-31",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-31", "score": 3 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["memory-system", "claude-code", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "ffmpeg",
+      "label": "ffmpeg",
+      "type": "tool",
+      "domain": "video",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 4 }
+      ],
+      "connections": ["domain-video", "clipper", "yt-dlp", "whisper"],
+      "visibility": "public"
+    },
+    {
+      "id": "yt-dlp",
+      "label": "yt-dlp",
+      "type": "tool",
+      "domain": "video",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 5 }
+      ],
+      "connections": ["domain-video", "clipper", "ffmpeg"],
+      "visibility": "public"
+    },
+    {
+      "id": "whisper",
+      "label": "Whisper (ASR)",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 4 }
+      ],
+      "connections": ["domain-ai-ml", "domain-video", "clipper", "ffmpeg"],
+      "visibility": "public"
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "type": "tool",
+      "domain": "systems",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 3 }
+      ],
+      "connections": ["domain-systems", "linux"],
+      "visibility": "public"
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "type": "tool",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 4 }
+      ],
+      "connections": ["domain-systems", "bash", "docker"],
+      "visibility": "public"
+    },
+    {
+      "id": "llm-prompting",
+      "label": "LLM Prompt Engineering",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 5,
+      "history": [
+        { "date": "2026-03-28", "score": 5 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-ai-ml", "ollama", "groq", "multi-agent", "autotrader", "job-search-pipeline"],
+      "visibility": "public"
+    },
+    {
+      "id": "multi-agent",
+      "label": "Multi-Agent Systems",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-ai-ml", "llm-prompting", "autotrader", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "rag",
+      "label": "RAG",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-ai-ml", "llm-prompting", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "bracket-orders",
+      "label": "Bracket Orders / GTC",
+      "type": "concept",
+      "domain": "trading",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-trading", "alpaca-api", "autotrader", "paper-trading"],
+      "visibility": "public"
+    },
+    {
+      "id": "paper-trading",
+      "label": "Paper Trading",
+      "type": "concept",
+      "domain": "trading",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 3 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-trading", "alpaca-api", "bracket-orders", "autotrader"],
+      "visibility": "public"
+    },
+    {
+      "id": "memory-system",
+      "label": "AI Memory Systems",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-31",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-31", "score": 4 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-ai-ml", "claude-code", "obsidian-pkm", "knowledge-map-project", "knowledge-graphs"],
+      "visibility": "public"
+    },
+    {
+      "id": "knowledge-graphs",
+      "label": "Knowledge Graphs",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["domain-ai-ml", "memory-system", "knowledge-map-project", "d3js"],
+      "visibility": "public"
+    },
+    {
+      "id": "cron-jobs",
+      "label": "Cron / Scheduled Tasks",
+      "type": "concept",
+      "domain": "systems",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-systems", "bash", "autotrader"],
+      "visibility": "public"
+    },
+    {
+      "id": "ai-research",
+      "label": "AI Research (Enterprise)",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 6 }
+      ],
+      "connections": ["domain-strategy", "business-strategy"],
+      "visibility": "public"
+    },
+    {
+      "id": "business-strategy",
+      "label": "Business Strategy",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 7 }
+      ],
+      "connections": ["domain-strategy", "ai-research"],
+      "visibility": "public"
+    },
+    {
+      "id": "autotrader",
+      "label": "AutoTrader",
+      "type": "project",
+      "domain": "trading",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 6 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["python", "ollama", "alpaca-api", "bracket-orders", "paper-trading", "multi-agent", "llm-prompting", "bash", "cron-jobs", "domain-trading"],
+      "visibility": "public"
+    },
+    {
+      "id": "clipper",
+      "label": "Clipper",
+      "type": "project",
+      "domain": "video",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 6 }
+      ],
+      "connections": ["python", "ffmpeg", "yt-dlp", "whisper", "domain-video", "groq"],
+      "visibility": "public"
+    },
+    {
+      "id": "portfolio-website",
+      "label": "Portfolio Website",
+      "type": "project",
+      "domain": "web",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 6 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["nextjs", "typescript", "react", "tailwind", "vercel", "cloudflare", "domain-web"],
+      "visibility": "public"
+    },
+    {
+      "id": "clock-in",
+      "label": "cLock In",
+      "type": "project",
+      "domain": "web",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 7 }
+      ],
+      "connections": ["react", "typescript", "domain-web"],
+      "visibility": "public"
+    },
+    {
+      "id": "job-search-pipeline",
+      "label": "Job Search Pipeline",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-01",
+      "last_updated": "2026-04-01",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-04-01", "score": 8 }
+      ],
+      "connections": ["python", "ollama", "groq", "web-scraping", "llm-prompting", "domain-ai-ml"],
+      "visibility": "public"
+    },
+    {
+      "id": "lead-generator",
+      "label": "Lead Generator",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 8 }
+      ],
+      "connections": ["python", "web-scraping", "domain-ai-ml"],
+      "visibility": "public"
+    },
+    {
+      "id": "knowledge-map-project",
+      "label": "Knowledge Map",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["d3js", "nextjs", "typescript", "vercel", "cloudflare", "memory-system", "knowledge-graphs", "multi-agent", "obsidian-pkm", "domain-ai-ml", "domain-web", "svg-fundamentals", "css-animations"],
+      "visibility": "public"
+    }
+  ]
+}

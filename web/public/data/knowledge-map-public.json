@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-02",
-    "total_sessions": 7,
+    "total_sessions": 8,
     "schema_version": "1.0"
   },
   "nodes": [
@@ -52,7 +52,7 @@
         { "date": "2026-03-28", "score": 4 },
         { "date": "2026-04-02", "score": 5 }
       ],
-      "connections": ["typescript", "react", "nextjs", "tailwind", "vercel", "cloudflare", "portfolio-website", "clock-in", "knowledge-map-project"]
+      "connections": ["typescript", "react", "nextjs", "tailwind", "vercel", "cloudflare", "portfolio-website", "clock-in", "knowledge-map-project", "css-animations", "svg-fundamentals", "ui-ux-design"]
     },
     {
       "id": "domain-video",
@@ -687,7 +687,52 @@
       "history": [
         { "date": "2026-04-02", "score": 4 }
       ],
-      "connections": ["d3js", "nextjs", "typescript", "vercel", "cloudflare", "memory-system", "knowledge-graphs", "multi-agent", "obsidian-pkm", "domain-ai-ml", "domain-web"]
+      "connections": ["d3js", "nextjs", "typescript", "vercel", "cloudflare", "memory-system", "knowledge-graphs", "multi-agent", "obsidian-pkm", "domain-ai-ml", "domain-web", "svg-fundamentals", "css-animations"]
+    },
+    {
+      "id": "css-animations",
+      "label": "CSS Animations",
+      "type": "skill",
+      "domain": "web",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-web", "tailwind", "knowledge-map-project", "svg-fundamentals", "ui-ux-design"]
+    },
+    {
+      "id": "svg-fundamentals",
+      "label": "SVG",
+      "type": "skill",
+      "domain": "web",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-web", "d3js", "knowledge-map-project", "css-animations"]
+    },
+    {
+      "id": "ui-ux-design",
+      "label": "UI / UX Design",
+      "type": "concept",
+      "domain": "web",
+      "score": 2,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 2 }
+      ],
+      "connections": ["domain-web", "css-animations", "knowledge-map-project", "portfolio-website"]
     }
   ]
 }
