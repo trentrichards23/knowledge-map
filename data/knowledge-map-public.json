@@ -1,0 +1,693 @@
+{
+  "meta": {
+    "owner": "Trenton Richards",
+    "last_updated": "2026-04-02",
+    "total_sessions": 7,
+    "schema_version": "1.0"
+  },
+  "nodes": [
+    {
+      "id": "domain-ai-ml",
+      "label": "AI / ML Engineering",
+      "type": "domain",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 7,
+      "history": [
+        { "date": "2026-03-28", "score": 5 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["python", "ollama", "groq", "llm-prompting", "multi-agent", "rag", "whisper", "autotrader", "clipper", "knowledge-map-project"]
+    },
+    {
+      "id": "domain-trading",
+      "label": "Trading & Finance",
+      "type": "domain",
+      "domain": "trading",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 3 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["python", "alpaca-api", "bracket-orders", "paper-trading", "autotrader"]
+    },
+    {
+      "id": "domain-web",
+      "label": "Web Development",
+      "type": "domain",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 5,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["typescript", "react", "nextjs", "tailwind", "vercel", "cloudflare", "portfolio-website", "clock-in", "knowledge-map-project"]
+    },
+    {
+      "id": "domain-video",
+      "label": "Video & Automation",
+      "type": "domain",
+      "domain": "video",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 5 }
+      ],
+      "connections": ["python", "ffmpeg", "yt-dlp", "whisper", "clipper"]
+    },
+    {
+      "id": "domain-strategy",
+      "label": "Strategy & Business",
+      "type": "domain",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 7 }
+      ],
+      "connections": ["ai-research", "business-strategy"]
+    },
+    {
+      "id": "domain-systems",
+      "label": "Systems & DevOps",
+      "type": "domain",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 3 },
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["git", "bash", "docker", "linux", "claude-code"]
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 7,
+      "history": [
+        { "date": "2026-03-28", "score": 7 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-ai-ml", "domain-trading", "domain-video", "autotrader", "clipper", "job-search-pipeline", "lead-generator", "web-scraping"]
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["react", "nextjs", "portfolio-website", "clock-in", "knowledge-map-project"]
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["typescript", "nextjs", "tailwind", "portfolio-website", "clock-in"]
+    },
+    {
+      "id": "nextjs",
+      "label": "Next.js",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["react", "typescript", "tailwind", "vercel", "portfolio-website", "knowledge-map-project"]
+    },
+    {
+      "id": "tailwind",
+      "label": "Tailwind CSS",
+      "type": "skill",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 5 }
+      ],
+      "connections": ["react", "nextjs", "portfolio-website"]
+    },
+    {
+      "id": "git",
+      "label": "Git",
+      "type": "skill",
+      "domain": "systems",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 6 }
+      ],
+      "connections": ["domain-systems", "python"]
+    },
+    {
+      "id": "bash",
+      "label": "Bash / Shell",
+      "type": "skill",
+      "domain": "systems",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-systems", "autotrader", "cron-jobs"]
+    },
+    {
+      "id": "web-scraping",
+      "label": "Web Scraping",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-01",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 5 },
+        { "date": "2026-04-01", "score": 6 }
+      ],
+      "connections": ["python", "lead-generator", "job-search-pipeline"]
+    },
+    {
+      "id": "d3js",
+      "label": "D3.js",
+      "type": "skill",
+      "domain": "web",
+      "score": 2,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 2 }
+      ],
+      "connections": ["domain-web", "typescript", "knowledge-map-project", "knowledge-graphs"]
+    },
+    {
+      "id": "claude-code",
+      "label": "Claude Code",
+      "type": "tool",
+      "domain": "systems",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 7,
+      "history": [
+        { "date": "2026-03-28", "score": 6 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["domain-systems", "domain-ai-ml", "obsidian-pkm", "memory-system"]
+    },
+    {
+      "id": "ollama",
+      "label": "Ollama",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-01",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-04-01", "score": 5 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-ai-ml", "autotrader", "job-search-pipeline", "llm-prompting"]
+    },
+    {
+      "id": "groq",
+      "label": "Groq API",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-01",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-01", "score": 5 }
+      ],
+      "connections": ["domain-ai-ml", "job-search-pipeline", "ollama"]
+    },
+    {
+      "id": "alpaca-api",
+      "label": "Alpaca API",
+      "type": "tool",
+      "domain": "trading",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-trading", "python", "autotrader", "bracket-orders", "paper-trading"]
+    },
+    {
+      "id": "vercel",
+      "label": "Vercel",
+      "type": "tool",
+      "domain": "web",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["nextjs", "cloudflare", "portfolio-website", "knowledge-map-project"]
+    },
+    {
+      "id": "cloudflare",
+      "label": "Cloudflare DNS",
+      "type": "tool",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["vercel", "portfolio-website", "knowledge-map-project"]
+    },
+    {
+      "id": "obsidian-pkm",
+      "label": "Obsidian / PKM",
+      "type": "tool",
+      "domain": "systems",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-31",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-31", "score": 3 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["memory-system", "claude-code", "knowledge-map-project"]
+    },
+    {
+      "id": "ffmpeg",
+      "label": "ffmpeg",
+      "type": "tool",
+      "domain": "video",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 4 }
+      ],
+      "connections": ["domain-video", "clipper", "yt-dlp", "whisper"]
+    },
+    {
+      "id": "yt-dlp",
+      "label": "yt-dlp",
+      "type": "tool",
+      "domain": "video",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 5 }
+      ],
+      "connections": ["domain-video", "clipper", "ffmpeg"]
+    },
+    {
+      "id": "whisper",
+      "label": "Whisper (ASR)",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 4 }
+      ],
+      "connections": ["domain-ai-ml", "domain-video", "clipper", "ffmpeg"]
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "type": "tool",
+      "domain": "systems",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 3 }
+      ],
+      "connections": ["domain-systems", "linux"]
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "type": "tool",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 4 }
+      ],
+      "connections": ["domain-systems", "bash", "docker"]
+    },
+    {
+      "id": "llm-prompting",
+      "label": "LLM Prompt Engineering",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 5,
+      "history": [
+        { "date": "2026-03-28", "score": 5 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-ai-ml", "ollama", "groq", "multi-agent", "autotrader", "job-search-pipeline"]
+    },
+    {
+      "id": "multi-agent",
+      "label": "Multi-Agent Systems",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-ai-ml", "llm-prompting", "autotrader", "knowledge-map-project"]
+    },
+    {
+      "id": "rag",
+      "label": "RAG",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 3,
+      "proficiency": "novice",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 3 }
+      ],
+      "connections": ["domain-ai-ml", "llm-prompting", "knowledge-map-project"]
+    },
+    {
+      "id": "bracket-orders",
+      "label": "Bracket Orders / GTC",
+      "type": "concept",
+      "domain": "trading",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-trading", "alpaca-api", "autotrader", "paper-trading"]
+    },
+    {
+      "id": "paper-trading",
+      "label": "Paper Trading",
+      "type": "concept",
+      "domain": "trading",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 3,
+      "history": [
+        { "date": "2026-03-28", "score": 3 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-trading", "alpaca-api", "bracket-orders", "autotrader"]
+    },
+    {
+      "id": "memory-system",
+      "label": "AI Memory Systems",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-31",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-31", "score": 4 },
+        { "date": "2026-04-02", "score": 6 }
+      ],
+      "connections": ["domain-ai-ml", "claude-code", "obsidian-pkm", "knowledge-map-project", "knowledge-graphs"]
+    },
+    {
+      "id": "knowledge-graphs",
+      "label": "Knowledge Graphs",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["domain-ai-ml", "memory-system", "knowledge-map-project", "d3js"]
+    },
+    {
+      "id": "cron-jobs",
+      "label": "Cron / Scheduled Tasks",
+      "type": "concept",
+      "domain": "systems",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 4 },
+        { "date": "2026-04-02", "score": 5 }
+      ],
+      "connections": ["domain-systems", "bash", "autotrader"]
+    },
+    {
+      "id": "ai-research",
+      "label": "AI Research (Enterprise)",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 6 }
+      ],
+      "connections": ["domain-strategy", "business-strategy"]
+    },
+    {
+      "id": "business-strategy",
+      "label": "Business Strategy",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 7 }
+      ],
+      "connections": ["domain-strategy", "ai-research"]
+    },
+    {
+      "id": "autotrader",
+      "label": "AutoTrader",
+      "type": "project",
+      "domain": "trading",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 4,
+      "history": [
+        { "date": "2026-03-28", "score": 6 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["python", "ollama", "alpaca-api", "bracket-orders", "paper-trading", "multi-agent", "llm-prompting", "bash", "cron-jobs", "domain-trading"]
+    },
+    {
+      "id": "clipper",
+      "label": "Clipper",
+      "type": "project",
+      "domain": "video",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 6 }
+      ],
+      "connections": ["python", "ffmpeg", "yt-dlp", "whisper", "domain-video", "groq"]
+    },
+    {
+      "id": "portfolio-website",
+      "label": "Portfolio Website",
+      "type": "project",
+      "domain": "web",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-04-02",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-03-28", "score": 6 },
+        { "date": "2026-04-02", "score": 8 }
+      ],
+      "connections": ["nextjs", "typescript", "react", "tailwind", "vercel", "cloudflare", "domain-web"]
+    },
+    {
+      "id": "clock-in",
+      "label": "cLock In",
+      "type": "project",
+      "domain": "web",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 7 }
+      ],
+      "connections": ["react", "typescript", "domain-web"]
+    },
+    {
+      "id": "job-search-pipeline",
+      "label": "Job Search Pipeline",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-01",
+      "last_updated": "2026-04-01",
+      "session_count": 2,
+      "history": [
+        { "date": "2026-04-01", "score": 8 }
+      ],
+      "connections": ["python", "ollama", "groq", "web-scraping", "llm-prompting", "domain-ai-ml"]
+    },
+    {
+      "id": "lead-generator",
+      "label": "Lead Generator",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-03-28",
+      "last_updated": "2026-03-28",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-03-28", "score": 8 }
+      ],
+      "connections": ["python", "web-scraping", "domain-ai-ml"]
+    },
+    {
+      "id": "knowledge-map-project",
+      "label": "Knowledge Map",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-04-02",
+      "last_updated": "2026-04-02",
+      "session_count": 1,
+      "history": [
+        { "date": "2026-04-02", "score": 4 }
+      ],
+      "connections": ["d3js", "nextjs", "typescript", "vercel", "cloudflare", "memory-system", "knowledge-graphs", "multi-agent", "obsidian-pkm", "domain-ai-ml", "domain-web"]
+    }
+  ]
+}
