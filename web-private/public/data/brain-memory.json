@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-03",
-    "total_sessions": 12,
+    "total_sessions": 13,
     "schema_version": "1.0",
     "visibility": "private",
     "domain_colors": {
@@ -2341,6 +2341,17 @@
       "connections": [
         "domain-systems"
       ]
+    },
+    {
+      "id": "job-search-strategy",
+      "score": 7,
+      "proficiency": "proficient",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": {
+        "date": "2026-04-03",
+        "score": 7
+      }
     }
   ]
 }
