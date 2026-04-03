@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-03",
-    "total_sessions": 11,
+    "total_sessions": 12,
     "schema_version": "1.0",
     "visibility": "private",
     "domain_colors": {
@@ -482,11 +482,11 @@
       "label": "Become a Weapon in the Workforce",
       "type": "goal",
       "domain": "personal",
-      "score": 7,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-02",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 3,
       "history": [
         {
           "date": "2026-04-02",
@@ -851,7 +851,7 @@
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 27,
+      "session_count": 28,
       "history": [
         {
           "date": "2026-03-28",
@@ -1946,11 +1946,11 @@
       "label": "Knowledge Map",
       "type": "project",
       "domain": "ai-ml",
-      "score": 7,
+      "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-04-02",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 3,
       "history": [
         {
           "date": "2026-04-02",
