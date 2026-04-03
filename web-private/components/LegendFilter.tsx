@@ -1,25 +1,19 @@
 'use client'
 
-const DOMAINS = [
-  { id: 'ai-ml',     label: 'AI / ML',     color: '#43aa8b' },
-  { id: 'trading',   label: 'Trading',     color: '#f9c74f' },
-  { id: 'web',       label: 'Web Dev',     color: '#277da1' },
-  { id: 'video',     label: 'Video',       color: '#f8961e' },
-  { id: 'strategy',  label: 'Strategy',    color: '#f94144' },
-  { id: 'systems',   label: 'Systems',     color: '#577590' },
-  { id: 'personal',  label: 'Personal',    color: '#c77dff' },
-  { id: 'finance',   label: 'Finance',     color: '#4cc9f0' },
-  { id: 'interests', label: 'Interests',   color: '#f72585' },
-  { id: 'network',   label: 'Network',     color: '#7b9e87' },
-]
+interface Domain {
+  id: string
+  label: string
+  color: string
+}
 
 interface Props {
   activeFilter: string | null
-  nodeCounts: Record<string, number>  // how many nodes per domain
+  domains: Domain[]
+  nodeCounts: Record<string, number>
   onFilter: (domain: string | null) => void
 }
 
-export default function LegendFilter({ activeFilter, nodeCounts, onFilter }: Props) {
+export default function LegendFilter({ activeFilter, domains, nodeCounts, onFilter }: Props) {
   return (
     <div className="absolute left-5 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-1">
       {/* Domain filters */}
@@ -37,7 +31,7 @@ export default function LegendFilter({ activeFilter, nodeCounts, onFilter }: Pro
           All
         </button>
 
-        {DOMAINS.map(d => {
+        {domains.map(d => {
           const isActive = activeFilter === d.id
           const count = nodeCounts[d.id] ?? 0
           return (

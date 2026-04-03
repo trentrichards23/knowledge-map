@@ -31,7 +31,7 @@ export default function Page() {
       </div>
 
       {/* Viewer manages timeline state — passes to graph + scrubber */}
-      <KnowledgeMapViewer nodes={data.nodes} lastUpdated={data.meta.last_updated} />
+      <KnowledgeMapViewer nodes={data.nodes} lastUpdated={data.meta.last_updated} domainColors={data.meta.domain_colors ?? {}} />
     </main>
   )
 }

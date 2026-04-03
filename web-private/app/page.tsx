@@ -27,7 +27,7 @@ export default function Page() {
         </a>
       </div>
 
-      <KnowledgeMapViewer nodes={data.nodes} lastUpdated={data.meta.last_updated} />
+      <KnowledgeMapViewer nodes={data.nodes} lastUpdated={data.meta.last_updated} domainColors={data.meta.domain_colors ?? {}} />
     </main>
   )
 }

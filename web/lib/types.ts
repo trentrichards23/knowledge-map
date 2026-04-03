@@ -25,6 +25,7 @@ export interface GraphMeta {
   last_updated: string
   total_sessions: number
   schema_version: string
+  domain_colors?: Record<string, string>
 }
 
 export interface KnowledgeMapData {

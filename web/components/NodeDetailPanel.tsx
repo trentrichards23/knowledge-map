@@ -2,15 +2,6 @@
 
 import type { KnowledgeNode } from '@/lib/types'
 
-const DOMAIN_COLORS: Record<string, string> = {
-  'ai-ml':     '#43aa8b',
-  'trading':   '#f9c74f',
-  'web':       '#277da1',
-  'video':     '#f8961e',
-  'strategy':  '#f94144',
-  'systems':   '#577590',
-}
-
 const PROFICIENCY_COLORS: Record<string, string> = {
   fluent:  '#a8d8a8',
   working: '#f0c98a',
@@ -64,10 +55,11 @@ function Sparkline({ history }: { history: { date: string; score: number }[] }) 
 interface Props {
   node: KnowledgeNode | null
   allNodes: KnowledgeNode[]
+  domainColors: Record<string, string>
   onClose: () => void
 }
 
-export default function NodeDetailPanel({ node, allNodes, onClose }: Props) {
+export default function NodeDetailPanel({ node, allNodes, domainColors, onClose }: Props) {
   const isOpen = node !== null
 
   // Look up labels for connected nodes
@@ -77,7 +69,7 @@ export default function NodeDetailPanel({ node, allNodes, onClose }: Props) {
         .filter(Boolean) as KnowledgeNode[]
     : []
 
-  const domainColor = node ? (DOMAIN_COLORS[node.domain] ?? '#888') : '#888'
+  const domainColor = node ? (domainColors[node.domain] ?? '#888') : '#888'
   const profColor   = node ? (PROFICIENCY_COLORS[node.proficiency] ?? '#aaa') : '#aaa'
 
   return (
@@ -168,7 +160,7 @@ export default function NodeDetailPanel({ node, allNodes, onClose }: Props) {
                   <div key={cn.id} className="flex items-center gap-2 text-xs">
                     <span
                       className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ background: DOMAIN_COLORS[cn.domain] ?? '#888' }}
+                      style={{ background: domainColors[cn.domain] ?? '#888' }}
                     />
                     <span className="text-white/50 truncate">{cn.label}</span>
                     <span className="text-white/20 text-[10px] ml-auto">{cn.type}</span>

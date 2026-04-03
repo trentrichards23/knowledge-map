@@ -3,7 +3,15 @@
     "owner": "Trenton Richards",
     "last_updated": "2026-04-03",
     "total_sessions": 10,
-    "schema_version": "1.0"
+    "schema_version": "1.0",
+    "domain_colors": {
+      "ai-ml":    "#43aa8b",
+      "trading":  "#f9c74f",
+      "web":      "#277da1",
+      "video":    "#f8961e",
+      "strategy": "#f94144",
+      "systems":  "#577590"
+    }
   },
   "nodes": [
     {

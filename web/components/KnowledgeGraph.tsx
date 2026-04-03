@@ -4,18 +4,6 @@ import { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import type { KnowledgeNode, SimNode, SimLink } from '@/lib/types'
 
-// ── Color per domain ─────────────────────────────────────────────────────────
-const DOMAIN_COLORS: Record<string, string> = {
-  'ai-ml':     '#43aa8b',
-  'trading':   '#f9c74f',
-  'web':       '#277da1',
-  'video':     '#f8961e',
-  'strategy':  '#f94144',
-  'systems':   '#577590',
-}
-
-const domainColor = (domain: string) => DOMAIN_COLORS[domain] ?? '#888'
-
 // ── BFS from domain nodes → distance map ─────────────────────────────────────
 // Used to soften node colors the further they are from their domain hub.
 function computeDistances(nodes: KnowledgeNode[]): Map<string, number> {
@@ -44,8 +32,8 @@ function computeDistances(nodes: KnowledgeNode[]): Map<string, number> {
 
 // ── Color with distance-based saturation fade ─────────────────────────────────
 // Each hop from a domain node reduces saturation by ~28%, flooring at 25%.
-function nodeColor(node: KnowledgeNode, distances: Map<string, number>): string {
-  const base = domainColor(node.domain)
+function nodeColor(node: KnowledgeNode, distances: Map<string, number>, domainColors: Record<string, string>): string {
+  const base = domainColors[node.domain] ?? '#888'
   const dist = distances.get(node.id) ?? 3
   if (dist === 0) return base
   const c = d3.hsl(base)
@@ -91,11 +79,12 @@ interface Props {
   currentDate: string
   activeFilter: string | null
   selectedNodeId: string | null
+  domainColors: Record<string, string>
   onNodeClick: (node: KnowledgeNode) => void
   onBackgroundClick: () => void
 }
 
-export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selectedNodeId, onNodeClick, onBackgroundClick }: Props) {
+export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selectedNodeId, domainColors, onNodeClick, onBackgroundClick }: Props) {
   const svgRef    = useRef<SVGSVGElement>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
   // Store D3 selections in refs so the timeline effect can reach them
@@ -187,7 +176,7 @@ export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selec
       .data(simNodes)
       .join('circle')
       .attr('r', d => nodeRadius(d))
-      .attr('fill', d => nodeColor(d, distances))
+      .attr('fill', d => nodeColor(d, distances, domainColors))
       // fill opacity by type: domains are hollow rings, projects are semi-filled,
       // skills/tools/concepts are solid
       .attr('fill-opacity', d => {
@@ -195,7 +184,7 @@ export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selec
         if (d.type === 'project')  return 0.5
         return 0.75
       })
-      .attr('stroke', d => nodeColor(d, distances))
+      .attr('stroke', d => nodeColor(d, distances, domainColors))
       // stroke weight + dash by type:
       //   domain  — thick dashed ring (clearly a category node)
       //   project — thick solid (you built this)
@@ -227,7 +216,7 @@ export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selec
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
       .attr('dy', d => nodeRadius(d) + 12)
-      .attr('fill', d => nodeColor(d, distances))
+      .attr('fill', d => nodeColor(d, distances, domainColors))
       .attr('font-size', d => d.type === 'domain' ? '11px' : '9px')
       .attr('font-weight', d => d.type === 'domain' ? '600' : '400')
       .attr('opacity', d => (d.type === 'domain' || d.type === 'project') ? 0.9 : 0.4)
