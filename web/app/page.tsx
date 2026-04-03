@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import type { KnowledgeMapData } from '@/lib/types'
-import KnowledgeGraph from '@/components/KnowledgeGraph'
+import KnowledgeMapViewer from '@/components/KnowledgeMapViewer'
 
 export default function Page() {
   // Server Component — reads the JSON at request time (or build time with static export)
@@ -19,7 +19,7 @@ export default function Page() {
             Knowledge Map
           </h1>
           <p className="text-xs text-white/30 mt-0.5">
-            {data.meta.total_sessions} sessions · last updated {data.meta.last_updated}
+            last updated {data.meta.last_updated}
           </p>
         </div>
         <a
@@ -30,8 +30,8 @@ export default function Page() {
         </a>
       </div>
 
-      {/* Graph fills the full viewport — client component takes over from here */}
-      <KnowledgeGraph nodes={data.nodes} />
+      {/* Viewer manages timeline state — passes to graph + scrubber */}
+      <KnowledgeMapViewer nodes={data.nodes} lastUpdated={data.meta.last_updated} />
     </main>
   )
 }

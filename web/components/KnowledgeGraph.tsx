@@ -1,20 +1,57 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import type { KnowledgeNode, SimNode, SimLink } from '@/lib/types'
 
 // ── Color per domain ─────────────────────────────────────────────────────────
 const DOMAIN_COLORS: Record<string, string> = {
-  'ai-ml':     '#d3968c',
-  'trading':   '#839958',
-  'web':       '#4a9db5',
-  'video':     '#7a6e9c',
-  'strategy':  '#c4a35a',
-  'systems':   '#6e8c7a',
+  'ai-ml':     '#43aa8b',
+  'trading':   '#f9c74f',
+  'web':       '#277da1',
+  'video':     '#f8961e',
+  'strategy':  '#f94144',
+  'systems':   '#577590',
 }
 
 const domainColor = (domain: string) => DOMAIN_COLORS[domain] ?? '#888'
+
+// ── BFS from domain nodes → distance map ─────────────────────────────────────
+// Used to soften node colors the further they are from their domain hub.
+function computeDistances(nodes: KnowledgeNode[]): Map<string, number> {
+  const adj = new Map<string, Set<string>>()
+  for (const n of nodes) adj.set(n.id, new Set())
+  for (const n of nodes) {
+    for (const c of n.connections) {
+      adj.get(n.id)?.add(c)
+      adj.get(c)?.add(n.id) // undirected
+    }
+  }
+  const dist = new Map<string, number>()
+  const queue: string[] = []
+  for (const n of nodes) {
+    if (n.type === 'domain') { dist.set(n.id, 0); queue.push(n.id) }
+  }
+  while (queue.length > 0) {
+    const cur = queue.shift()!
+    const d = dist.get(cur)!
+    for (const nb of (adj.get(cur) ?? [])) {
+      if (!dist.has(nb)) { dist.set(nb, d + 1); queue.push(nb) }
+    }
+  }
+  return dist
+}
+
+// ── Color with distance-based saturation fade ─────────────────────────────────
+// Each hop from a domain node reduces saturation by ~28%, flooring at 25%.
+function nodeColor(node: KnowledgeNode, distances: Map<string, number>): string {
+  const base = domainColor(node.domain)
+  const dist = distances.get(node.id) ?? 3
+  if (dist === 0) return base
+  const c = d3.hsl(base)
+  c.s = Math.max(0.25, c.s * Math.pow(0.72, dist))
+  return c.formatHex()
+}
 
 // ── Node radius scales with score (1–10 → ~7–22px) ───────────────────────────
 const nodeRadius = (node: KnowledgeNode) => {
@@ -51,12 +88,21 @@ function buildLinks(nodes: KnowledgeNode[]): SimLink[] {
 
 interface Props {
   nodes: KnowledgeNode[]
+  currentDate: string
+  activeFilter: string | null
+  selectedNodeId: string | null
+  onNodeClick: (node: KnowledgeNode) => void
+  onBackgroundClick: () => void
 }
 
-export default function KnowledgeGraph({ nodes }: Props) {
-  const svgRef = useRef<SVGSVGElement>(null)
+export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selectedNodeId, onNodeClick, onBackgroundClick }: Props) {
+  const svgRef    = useRef<SVGSVGElement>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
-  const [hoveredId, setHoveredId] = useState<string | null>(null)
+  // Store D3 selections in refs so the timeline effect can reach them
+  // without re-running the full simulation
+  const nodeSelRef  = useRef<d3.Selection<SVGCircleElement, SimNode, SVGGElement, unknown> | null>(null)
+  const linkSelRef  = useRef<d3.Selection<SVGLineElement, SimLink, SVGGElement, unknown> | null>(null)
+  const labelSelRef = useRef<d3.Selection<SVGTextElement, SimNode, SVGGElement, unknown> | null>(null)
 
   useEffect(() => {
     if (!svgRef.current) return
@@ -99,6 +145,7 @@ export default function KnowledgeGraph({ nodes }: Props) {
     // Deep-copy nodes so D3 can mutate them (adds x, y, vx, vy)
     const simNodes: SimNode[] = nodes.map(n => ({ ...n }))
     const links = buildLinks(nodes)
+    const distances = computeDistances(nodes)
 
     // ── Force simulation ─────────────────────────────────────────────────────
     // Think of it as a physics world:
@@ -126,31 +173,53 @@ export default function KnowledgeGraph({ nodes }: Props) {
       .force('collision', d3.forceCollide<SimNode>().radius(d => nodeRadius(d) + 8))
 
     // ── Render edges ─────────────────────────────────────────────────────────
-    const link = g.append('g')
-      .selectAll('line')
+    const link = linkSelRef.current = g.append('g')
+      .selectAll<SVGLineElement, SimLink>('line')
       .data(links)
-      .join('line')
+      .join<SVGLineElement>('line')
       .attr('stroke', '#ffffff')
       .attr('stroke-opacity', 0.06)
       .attr('stroke-width', 1)
 
     // ── Render nodes (circles) ───────────────────────────────────────────────
-    const node = g.append('g')
+    const node = nodeSelRef.current = g.append('g')
       .selectAll<SVGCircleElement, SimNode>('circle')
       .data(simNodes)
       .join('circle')
       .attr('r', d => nodeRadius(d))
-      .attr('fill', d => domainColor(d.domain))
-      .attr('fill-opacity', d => d.type === 'domain' ? 0.15 : 0.8)
-      .attr('stroke', d => domainColor(d.domain))
-      .attr('stroke-width', d => d.type === 'domain' ? 1.5 : 1)
-      .attr('stroke-opacity', 0.7)
+      .attr('fill', d => nodeColor(d, distances))
+      // fill opacity by type: domains are hollow rings, projects are semi-filled,
+      // skills/tools/concepts are solid
+      .attr('fill-opacity', d => {
+        if (d.type === 'domain')   return 0.08
+        if (d.type === 'project')  return 0.5
+        return 0.75
+      })
+      .attr('stroke', d => nodeColor(d, distances))
+      // stroke weight + dash by type:
+      //   domain  — thick dashed ring (clearly a category node)
+      //   project — thick solid (you built this)
+      //   skill   — normal solid
+      //   tool    — thin with slight dash
+      //   concept — thin solid
+      .attr('stroke-width', d => {
+        if (d.type === 'domain')  return 1.5
+        if (d.type === 'project') return 2
+        if (d.type === 'tool')    return 1
+        return 1
+      })
+      .attr('stroke-dasharray', d => {
+        if (d.type === 'domain') return '4 3'
+        if (d.type === 'tool')   return '2 2'
+        return 'none'
+      })
+      .attr('stroke-opacity', 0.8)
       .attr('filter', d => `url(#${glowId(d.proficiency)})`)
       .style('cursor', 'pointer')
 
     // ── Labels ───────────────────────────────────────────────────────────────
     // Always show labels for domain + project nodes; others show on hover (handled via opacity)
-    const label = g.append('g')
+    const label = labelSelRef.current = g.append('g')
       .selectAll<SVGTextElement, SimNode>('text')
       .data(simNodes)
       .join('text')
@@ -158,7 +227,7 @@ export default function KnowledgeGraph({ nodes }: Props) {
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
       .attr('dy', d => nodeRadius(d) + 12)
-      .attr('fill', d => domainColor(d.domain))
+      .attr('fill', d => nodeColor(d, distances))
       .attr('font-size', d => d.type === 'domain' ? '11px' : '9px')
       .attr('font-weight', d => d.type === 'domain' ? '600' : '400')
       .attr('opacity', d => (d.type === 'domain' || d.type === 'project') ? 0.9 : 0.4)
@@ -224,7 +293,12 @@ export default function KnowledgeGraph({ nodes }: Props) {
             <div class="tt-label">${d.label}</div>
             <div class="tt-type">${d.type}</div>
             <div class="tt-proficiency" style="color:${profColor}">${d.proficiency}</div>
-            <div class="tt-sessions">${d.session_count} session${d.session_count !== 1 ? 's' : ''} · score ${d.score}/10</div>
+            <div class="tt-score-row">
+              <span class="tt-score-val">${d.score}/10</span>
+              <div class="tt-score-track">
+                <div class="tt-score-fill" style="width:${d.score * 10}%;background:${profColor}"></div>
+              </div>
+            </div>
           `)
       })
       .on('mousemove', (event) => {
@@ -233,11 +307,14 @@ export default function KnowledgeGraph({ nodes }: Props) {
           .style('top',  `${event.clientY - 10}px`)
       })
       .on('mouseleave', () => {
-        // Restore all opacities
         node.attr('fill-opacity', d => d.type === 'domain' ? 0.15 : 0.8)
         link.attr('stroke-opacity', 0.06)
         label.attr('opacity', d => (d.type === 'domain' || d.type === 'project') ? 0.9 : 0.4)
         tooltip.style('opacity', '0')
+      })
+      .on('click', (event, d) => {
+        event.stopPropagation() // prevent background click from immediately closing
+        onNodeClick(d)
       })
 
     // ── Tick — runs every simulation frame, updates DOM positions ─────────────
@@ -255,18 +332,116 @@ export default function KnowledgeGraph({ nodes }: Props) {
 
       label
         .attr('x', d => d.x ?? 0)
-        .attr('y', d => (d.y ?? 0))
+        .attr('y', d => d.y ?? 0)
     })
 
-    // ── Cleanup when component unmounts or nodes prop changes ─────────────────
+    // ── Label collision detection — runs once when simulation cools ────────────
+    // Sort nodes by score descending so high-score nodes keep their labels.
+    // For each label, check if its bounding box overlaps any already-placed label.
+    // If it collides, hide it (opacity 0) — the tooltip will still show it on hover.
+    simulation.on('end', () => {
+      const placed: { x1: number; y1: number; x2: number; y2: number }[] = []
+      const labelEls = label.nodes()
+
+      // Process highest-score nodes first so they win collisions
+      const sorted = [...simNodes].sort((a, b) => b.score - a.score)
+
+      for (const d of sorted) {
+        const el = labelEls.find(el => d3.select(el).datum() === d)
+        if (!el) continue
+
+        const bbox = (el as SVGTextElement).getBBox()
+        if (!bbox.width) continue  // not rendered yet
+
+        const pad = 2
+        const box = {
+          x1: bbox.x - pad,
+          y1: bbox.y - pad,
+          x2: bbox.x + bbox.width + pad,
+          y2: bbox.y + bbox.height + pad,
+        }
+
+        const overlaps = placed.some(p =>
+          box.x1 < p.x2 && box.x2 > p.x1 &&
+          box.y1 < p.y2 && box.y2 > p.y1
+        )
+
+        if (overlaps) {
+          // Only hide non-priority labels — always show domain + project
+          if (d.type !== 'domain' && d.type !== 'project') {
+            d3.select(el).attr('opacity', 0)
+          }
+        } else {
+          placed.push(box)
+        }
+      }
+    })
+
+    // ── Resize handling ───────────────────────────────────────────────────────
+    // ResizeObserver fires whenever the SVG's dimensions change (window resize,
+    // panel open/close, etc). We update forceCenter to the new midpoint and
+    // give the simulation a small alpha kick so nodes drift to the new center.
+    const resizeObserver = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        const { width, height } = entry.contentRect
+        simulation
+          .force('center', d3.forceCenter(width / 2, height / 2).strength(0.05))
+          .alpha(0.2)
+          .restart()
+      }
+    })
+    resizeObserver.observe(svgRef.current)
+
+    // ── Cleanup ───────────────────────────────────────────────────────────────
     return () => {
       simulation.stop()
+      resizeObserver.disconnect()
     }
   }, [nodes])
 
+  // ── Combined visibility effect — reacts to timeline scrubber AND domain filter ──
+  // Both filters gate node visibility. A node is visible only when:
+  //   1. first_seen <= currentDate (timeline gate)
+  //   2. domain matches activeFilter, or no filter is set (domain gate)
+  // We never restart the simulation — just update opacities via D3 transitions.
+  useEffect(() => {
+    if (!nodeSelRef.current || !linkSelRef.current || !labelSelRef.current) return
+
+    const activeIds = new Set(
+      nodes
+        .filter(n => n.first_seen <= currentDate)
+        .filter(n => !activeFilter || n.domain === activeFilter)
+        .map(n => n.id)
+    )
+
+    nodeSelRef.current
+      .transition().duration(300)
+      .attr('fill-opacity', (d: SimNode) => {
+        if (!activeIds.has(d.id)) return 0.04
+        return d.type === 'domain' ? 0.15 : 0.8
+      })
+      .attr('stroke-opacity', (d: SimNode) => activeIds.has(d.id) ? 0.7 : 0.06)
+      .attr('filter', (d: SimNode) => activeIds.has(d.id) ? `url(#${glowId(d.proficiency)})` : 'none')
+
+    linkSelRef.current
+      .transition().duration(300)
+      .attr('stroke-opacity', (d: SimLink) => {
+        const s = (d.source as SimNode).id
+        const t = (d.target as SimNode).id
+        return activeIds.has(s) && activeIds.has(t) ? 0.06 : 0.01
+      })
+
+    labelSelRef.current
+      .transition().duration(300)
+      .attr('opacity', (d: SimNode) => {
+        if (!activeIds.has(d.id)) return 0
+        return d.type === 'domain' || d.type === 'project' ? 0.9 : 0.4
+      })
+  }, [currentDate, activeFilter, nodes])
+
   return (
     <>
-      <svg ref={svgRef} className="graph-svg w-full h-full" />
+      <svg ref={svgRef} className="graph-svg w-full h-full" onClick={onBackgroundClick} />
       <div
         ref={tooltipRef}
         className="graph-tooltip"
