@@ -1,0 +1,232 @@
+{
+  "public_updates": [
+    {
+      "id": "domain-web",
+      "score": 6,
+      "session_count": 6,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "domain-systems",
+      "score": 5,
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 5 }
+    },
+    {
+      "id": "d3js",
+      "score": 4,
+      "proficiency": "working",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 4 }
+    },
+    {
+      "id": "nextjs",
+      "score": 6,
+      "proficiency": "working",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "typescript",
+      "score": 6,
+      "proficiency": "working",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "vercel",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    },
+    {
+      "id": "cloudflare",
+      "score": 6,
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "knowledge-map-project",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    },
+    {
+      "id": "css-animations",
+      "score": 4,
+      "proficiency": "working",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 4 }
+    },
+    {
+      "id": "svg-fundamentals",
+      "score": 4,
+      "proficiency": "working",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 4 }
+    },
+    {
+      "id": "ui-ux-design",
+      "score": 3,
+      "proficiency": "novice",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 3 }
+    },
+    {
+      "id": "git",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    },
+    {
+      "id": "github-api",
+      "label": "GitHub API",
+      "type": "tool",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 1,
+      "history": [{ "date": "2026-04-03", "score": 4 }],
+      "connections": ["domain-systems", "git", "knowledge-map-project"]
+    }
+  ],
+  "private_updates": [
+    {
+      "id": "domain-web",
+      "score": 6,
+      "session_count": 6,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "domain-systems",
+      "score": 5,
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 5 }
+    },
+    {
+      "id": "d3js",
+      "score": 4,
+      "proficiency": "working",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 4 }
+    },
+    {
+      "id": "nextjs",
+      "score": 6,
+      "proficiency": "working",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "typescript",
+      "score": 6,
+      "proficiency": "working",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "vercel",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    },
+    {
+      "id": "cloudflare",
+      "score": 6,
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 6 }
+    },
+    {
+      "id": "knowledge-map-project",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    },
+    {
+      "id": "css-animations",
+      "score": 4,
+      "proficiency": "working",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 4 }
+    },
+    {
+      "id": "svg-fundamentals",
+      "score": 4,
+      "proficiency": "working",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 4 }
+    },
+    {
+      "id": "ui-ux-design",
+      "score": 3,
+      "proficiency": "novice",
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 3 }
+    },
+    {
+      "id": "git",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    },
+    {
+      "id": "github-api",
+      "label": "GitHub API",
+      "type": "tool",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 1,
+      "history": [{ "date": "2026-04-03", "score": 4 }],
+      "connections": ["domain-systems", "git", "knowledge-map-project"],
+      "visibility": "public"
+    },
+    {
+      "id": "goal-skills",
+      "score": 7,
+      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "history_entry": { "date": "2026-04-03", "score": 7 }
+    }
+  ],
+  "new_connections": [
+    { "from": "github-api", "to": "knowledge-map-project" },
+    { "from": "github-api", "to": "git" },
+    { "from": "knowledge-map-project", "to": "github-api" }
+  ],
+  "session_summary": "Built out the full knowledge map system — redesigned UI with new color palette, distance-based saturation, vertical slider, flip clock, and tooltip score bar. Launched private brain at brain.trentbrichards.com with password auth and 75-node personal data including beliefs, goals, finances, and family. Built the session-end automation script with GitHub API auto-commit."
+}

@@ -26,8 +26,8 @@ from pathlib import Path
 # ── Config ────────────────────────────────────────────────────────────────────
 
 REPO        = "trentrichards23/knowledge-map"
-PUBLIC_PATH = "web/public/data/knowledge-map-public.json"
-PRIVATE_PATH = "web-private/public/data/knowledge-map-private.json"
+PUBLIC_PATH = "web/public/data/knowledge-map-memory.json"
+PRIVATE_PATH = "web-private/public/data/brain-memory.json"
 SESSIONS_DIR = Path.home() / ".claude" / "projects" / "-Users-trentonrichards"
 TODAY       = date.today().isoformat()
 
@@ -91,8 +91,8 @@ def extract_conversation(jsonl_path: Path, max_chars=40000) -> str:
 # ── Step 3: Load current JSON files ───────────────────────────────────────────
 
 def load_current_jsons():
-    public_file  = Path(__file__).parent.parent / "web" / "public" / "data" / "knowledge-map-public.json"
-    private_file = Path(__file__).parent.parent / "web-private" / "public" / "data" / "knowledge-map-private.json"
+    public_file  = Path(__file__).parent.parent / "web" / "public" / "data" / "knowledge-map-memory.json"
+    private_file = Path(__file__).parent.parent / "web-private" / "public" / "data" / "brain-memory.json"
     public_data  = json.loads(public_file.read_text())
     private_data = json.loads(private_file.read_text())
     return public_data, private_data
@@ -142,8 +142,8 @@ SESSION TRANSCRIPT:
 def apply_diffs(diff_path: str):
     diff = json.loads(Path(diff_path).read_text())
 
-    public_file  = Path(__file__).parent.parent / "web" / "public" / "data" / "knowledge-map-public.json"
-    private_file = Path(__file__).parent.parent / "web-private" / "public" / "data" / "knowledge-map-private.json"
+    public_file  = Path(__file__).parent.parent / "web" / "public" / "data" / "knowledge-map-memory.json"
+    private_file = Path(__file__).parent.parent / "web-private" / "public" / "data" / "brain-memory.json"
 
     public_data  = json.loads(public_file.read_text())
     private_data = json.loads(private_file.read_text())

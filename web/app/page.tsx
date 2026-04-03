@@ -6,7 +6,7 @@ import KnowledgeMapViewer from '@/components/KnowledgeMapViewer'
 export default function Page() {
   // Server Component — reads the JSON at request time (or build time with static export)
   // Lives in public/data/ so it's included in the Vercel build
-  const filePath = path.join(process.cwd(), 'public', 'data', 'knowledge-map-public.json')
+  const filePath = path.join(process.cwd(), 'public', 'data', 'knowledge-map-memory.json')
   const raw = fs.readFileSync(filePath, 'utf-8')
   const data: KnowledgeMapData = JSON.parse(raw)
 

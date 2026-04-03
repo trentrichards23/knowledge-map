@@ -4,7 +4,7 @@ import type { KnowledgeMapData } from '@/lib/types'
 import KnowledgeMapViewer from '@/components/KnowledgeMapViewer'
 
 export default function Page() {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'knowledge-map-private.json')
+  const filePath = path.join(process.cwd(), 'public', 'data', 'brain-memory.json')
   const raw = fs.readFileSync(filePath, 'utf-8')
   const data: KnowledgeMapData = JSON.parse(raw)
 
