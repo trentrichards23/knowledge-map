@@ -2,15 +2,15 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-03",
-    "total_sessions": 10,
+    "total_sessions": 11,
     "schema_version": "1.0",
     "domain_colors": {
-      "ai-ml":    "#43aa8b",
-      "trading":  "#f9c74f",
-      "web":      "#277da1",
-      "video":    "#f8961e",
+      "ai-ml": "#43aa8b",
+      "trading": "#f9c74f",
+      "web": "#277da1",
+      "video": "#f8961e",
       "strategy": "#f94144",
-      "systems":  "#577590"
+      "systems": "#577590"
     }
   },
   "nodes": [
@@ -199,8 +199,8 @@
       "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 7,
+      "last_updated": "2026-04-03",
+      "session_count": 27,
       "history": [
         {
           "date": "2026-03-28",
@@ -208,6 +208,10 @@
         },
         {
           "date": "2026-04-02",
+          "score": 8
+        },
+        {
+          "date": "2026-04-03",
           "score": 8
         }
       ],
@@ -227,11 +231,11 @@
       "label": "TypeScript",
       "type": "skill",
       "domain": "web",
-      "score": 6,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 4,
+      "session_count": 42,
       "history": [
         {
           "date": "2026-03-28",
@@ -259,11 +263,11 @@
       "label": "React",
       "type": "skill",
       "domain": "web",
-      "score": 5,
+      "score": 7,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 3,
+      "last_updated": "2026-04-03",
+      "session_count": 18,
       "history": [
         {
           "date": "2026-03-28",
@@ -272,6 +276,10 @@
         {
           "date": "2026-04-02",
           "score": 5
+        },
+        {
+          "date": "2026-04-03",
+          "score": 7
         }
       ],
       "connections": [
@@ -342,11 +350,11 @@
       "label": "Git",
       "type": "skill",
       "domain": "systems",
-      "score": 7,
+      "score": 4,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 4,
+      "session_count": 2,
       "history": [
         {
           "date": "2026-03-28",
@@ -554,11 +562,11 @@
       "label": "Vercel",
       "type": "tool",
       "domain": "web",
-      "score": 7,
+      "score": 4,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 4,
+      "session_count": 2,
       "history": [
         {
           "date": "2026-03-28",
@@ -640,11 +648,15 @@
       "score": 4,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 2,
       "history": [
         {
           "date": "2026-03-28",
+          "score": 4
+        },
+        {
+          "date": "2026-04-03",
           "score": 4
         }
       ],
@@ -660,15 +672,19 @@
       "label": "yt-dlp",
       "type": "tool",
       "domain": "video",
-      "score": 5,
+      "score": 4,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 2,
       "history": [
         {
           "date": "2026-03-28",
           "score": 5
+        },
+        {
+          "date": "2026-04-03",
+          "score": 4
         }
       ],
       "connections": [
@@ -685,11 +701,15 @@
       "score": 4,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 2,
       "history": [
         {
           "date": "2026-03-28",
+          "score": 4
+        },
+        {
+          "date": "2026-04-03",
           "score": 4
         }
       ],
@@ -1286,6 +1306,346 @@
         "domain-systems",
         "git",
         "knowledge-map-project"
+      ]
+    },
+    {
+      "id": "consulting",
+      "label": "Consulting",
+      "type": "skill",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "working",
+      "first_seen": "2026-02-12",
+      "last_updated": "2026-04-03",
+      "session_count": 19,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "product-strategy",
+      "label": "Product Strategy",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-02-14",
+      "last_updated": "2026-04-03",
+      "session_count": 11,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "n8n",
+      "label": "n8n",
+      "type": "tool",
+      "domain": "systems",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-02-14",
+      "last_updated": "2026-04-03",
+      "session_count": 21,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "domain-systems"
+      ]
+    },
+    {
+      "id": "aws",
+      "label": "AWS",
+      "type": "tool",
+      "domain": "systems",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-02-12",
+      "last_updated": "2026-04-03",
+      "session_count": 7,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "domain-systems"
+      ]
+    },
+    {
+      "id": "prompt-eng",
+      "label": "Prompt Engineering",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-02-17",
+      "last_updated": "2026-04-03",
+      "session_count": 6,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "domain-ai-ml"
+      ]
+    },
+    {
+      "id": "ai-agents",
+      "label": "AI Agents",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-02-27",
+      "last_updated": "2026-04-03",
+      "session_count": 9,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "domain-ai-ml"
+      ]
+    },
+    {
+      "id": "rest-apis",
+      "label": "REST APIs",
+      "type": "concept",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-03-04",
+      "last_updated": "2026-04-03",
+      "session_count": 5,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "domain-web"
+      ]
+    },
+    {
+      "id": "fine-tuning",
+      "label": "Fine-Tuning",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-02-15",
+      "last_updated": "2026-04-03",
+      "session_count": 3,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 4
+        }
+      ],
+      "connections": [
+        "domain-ai-ml"
+      ]
+    },
+    {
+      "id": "linux-bash",
+      "label": "Linux / Bash",
+      "type": "skill",
+      "domain": "systems",
+      "score": 7,
+      "proficiency": "working",
+      "first_seen": "2026-02-14",
+      "last_updated": "2026-04-03",
+      "session_count": 13,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "domain-systems"
+      ]
+    },
+    {
+      "id": "openai-api",
+      "label": "OpenAI API",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-02-11",
+      "last_updated": "2026-04-03",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 4
+        }
+      ],
+      "connections": [
+        "domain-ai-ml"
+      ]
+    },
+    {
+      "id": "html-css",
+      "label": "HTML / CSS",
+      "type": "skill",
+      "domain": "web",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-02-14",
+      "last_updated": "2026-04-03",
+      "session_count": 10,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "domain-web"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "label": "SQLite",
+      "type": "tool",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-02-15",
+      "last_updated": "2026-04-03",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 4
+        }
+      ],
+      "connections": [
+        "domain-systems"
+      ]
+    },
+    {
+      "id": "numpy",
+      "label": "NumPy",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-02-11",
+      "last_updated": "2026-04-03",
+      "session_count": 4,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "domain-ai-ml"
+      ]
+    },
+    {
+      "id": "competitive-intel",
+      "label": "Competitive Intelligence",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-02-15",
+      "last_updated": "2026-04-03",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 4
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "backtesting",
+      "label": "Backtesting",
+      "type": "concept",
+      "domain": "trading",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-02-17",
+      "last_updated": "2026-04-03",
+      "session_count": 4,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "domain-trading"
+      ]
+    },
+    {
+      "id": "pandas",
+      "label": "Pandas",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-02-11",
+      "last_updated": "2026-04-03",
+      "session_count": 5,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "domain-ai-ml"
+      ]
+    },
+    {
+      "id": "redis",
+      "label": "Redis",
+      "type": "tool",
+      "domain": "systems",
+      "score": 4,
+      "proficiency": "working",
+      "first_seen": "2026-03-22",
+      "last_updated": "2026-04-03",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 4
+        }
+      ],
+      "connections": [
+        "domain-systems"
       ]
     }
   ]
