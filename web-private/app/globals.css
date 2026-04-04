@@ -73,26 +73,25 @@ body {
 .graph-tooltip .tt-score-row {
   display: flex;
   align-items: center;
-  gap: 8px;
   margin-top: 2px;
 }
 .graph-tooltip .tt-score-val {
   font-size: 11px;
   color: #777;
-  flex-shrink: 0;
 }
-.graph-tooltip .tt-score-track {
+.graph-tooltip .tt-battery {
+  display: flex;
+  gap: 3px;
+  margin-top: 8px;
+}
+.graph-tooltip .tt-seg {
   flex: 1;
-  min-width: 0;
-  height: 3px;
+  height: 10px;
+  border-radius: 2px;
   background: rgba(255,255,255,0.08);
-  border-radius: 2px;
-  overflow: hidden;
 }
-.graph-tooltip .tt-score-fill {
-  height: 100%;
-  border-radius: 2px;
-  opacity: 0.75;
+.graph-tooltip .tt-seg-on {
+  opacity: 0.85;
 }
 
 /* Flip clock date display */
@@ -138,35 +137,42 @@ body {
   -webkit-appearance: slider-vertical;
   appearance: slider-vertical;
   writing-mode: vertical-lr;
-  width: 2px;
+  width: 14px;
   height: 180px;
-  background: rgba(255,255,255,0.12);
-  border-radius: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
   outline: none;
   cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: inset 0 2px 12px rgba(0,0,0,0.85), inset 0 0 6px rgba(0,0,0,0.5);
+  accent-color: white;
+}
+.timeline-slider-v::-webkit-slider-runnable-track {
+  background: transparent;
+  border-radius: 8px;
 }
 .timeline-slider-v::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 8px rgba(255,255,255,0.5);
-  cursor: grab;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.timeline-slider-v::-webkit-slider-thumb:active {
-  cursor: grabbing;
-  transform: scale(1.3);
-  box-shadow: 0 0 14px rgba(255,255,255,0.7);
-}
-.timeline-slider-v::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #ffffff;
   border: none;
-  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  cursor: grab;
+  transition: transform 0.15s ease;
+}
+.timeline-slider-v::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.2);
+}
+.timeline-slider-v::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.5);
   cursor: grab;
 }
