@@ -199,10 +199,30 @@ def apply_diffs(diff_path: str):
     print(f"✓ Applied {len(diff.get('public_updates',[]))} public updates")
     print(f"✓ Applied {len(diff.get('private_updates',[]))} private updates")
 
+    # ── Sync shared UI files from web/ → web-private/ ────────────────────────
+    repo_root = Path(__file__).parent.parent
+    SYNC_PAIRS = [
+        ("web/components/KnowledgeGraph.tsx",     "web-private/components/KnowledgeGraph.tsx"),
+        ("web/components/KnowledgeMapViewer.tsx",  "web-private/components/KnowledgeMapViewer.tsx"),
+        ("web/components/LegendFilter.tsx",        "web-private/components/LegendFilter.tsx"),
+        ("web/components/NodeDetailPanel.tsx",     "web-private/components/NodeDetailPanel.tsx"),
+        ("web/components/TimelineScrubber.tsx",    "web-private/components/TimelineScrubber.tsx"),
+        ("web/app/globals.css",                    "web-private/app/globals.css"),
+    ]
+    synced = []
+    for src_rel, dst_rel in SYNC_PAIRS:
+        src = repo_root / src_rel
+        dst = repo_root / dst_rel
+        if src.exists():
+            dst.write_bytes(src.read_bytes())
+            synced.append(dst_rel)
+    if synced:
+        print(f"✓ Synced {len(synced)} UI files from web/ → web-private/")
+
     if diff.get("session_summary"):
         print(f"\nSession summary: {diff['session_summary']}")
 
-    commit_to_github(public_data, private_data, diff.get("session_summary", "Session update"))
+    commit_to_github(public_data, private_data, diff.get("session_summary", "Session update"), synced)
 
 # ── Step 6: Commit via GitHub API ─────────────────────────────────────────────
 
@@ -234,18 +254,31 @@ def commit_file(path: str, content: str, sha: str, message: str, token: str):
     })
     print(f"✓ Committed {path}")
 
-def commit_to_github(public_data: dict, private_data: dict, summary: str):
+def commit_to_github(public_data: dict, private_data: dict, summary: str, ui_files: list = None):
     token = load_token()
     message = f"brain update {TODAY}: {summary[:60]}"
 
     public_content  = json.dumps(public_data, indent=2)
     private_content = json.dumps(private_data, indent=2)
 
+    repo_root = Path(__file__).parent.parent
+
     try:
         public_sha  = get_file_sha(PUBLIC_PATH, token)
         private_sha = get_file_sha(PRIVATE_PATH, token)
         commit_file(PUBLIC_PATH,  public_content,  public_sha,  message, token)
         commit_file(PRIVATE_PATH, private_content, private_sha, message, token)
+
+        for rel_path in (ui_files or []):
+            full_path = repo_root / rel_path
+            if not full_path.exists():
+                continue
+            try:
+                sha = get_file_sha(rel_path, token)
+                commit_file(rel_path, full_path.read_text(encoding="utf-8"), sha, message, token)
+            except urllib.error.HTTPError as e:
+                print(f"⚠ Could not commit {rel_path}: {e.code} {e.reason}")
+
         print(f"\n✓ Both files committed to GitHub — Vercel will rebuild automatically")
     except urllib.error.HTTPError as e:
         print(f"ERROR committing to GitHub: {e.code} {e.reason}")
