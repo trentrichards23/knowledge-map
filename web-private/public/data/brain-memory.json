@@ -2412,20 +2412,32 @@
       "proficiency": "proficient",
       "session_count": 2,
       "last_updated": "2026-04-03",
-      "history_entry": {
-        "date": "2026-04-03",
-        "score": 7
-      }
+      "domain": "strategy",
+      "first_seen": "2026-04-03",
+      "label": "Job Search Strategy",
+      "type": "skill",
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        }
+      ]
     },
     {
       "id": "personal-brand",
       "score": 6,
       "session_count": 2,
       "last_updated": "2026-04-03",
-      "history_entry": {
-        "date": "2026-04-03",
-        "score": 6
-      }
+      "domain": "personal",
+      "first_seen": "2026-04-03",
+      "label": "Personal Brand",
+      "type": "skill",
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 6
+        }
+      ]
     },
     {
       "id": "cold-email",

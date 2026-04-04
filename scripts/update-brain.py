@@ -163,7 +163,14 @@ def apply_diffs(diff_path: str):
                     elif key != "id":
                         node[key] = val
             else:
-                # New node — add it
+                # New node — validate required fields before adding
+                required = {"id", "domain", "first_seen", "label", "type"}
+                missing = required - set(update.keys())
+                if missing:
+                    print(f"⚠ Skipping new node '{node_id}' — missing fields: {missing}")
+                    continue
+                if not isinstance(update.get("history"), list):
+                    update["history"] = []
                 data["nodes"].append(update)
         data["meta"]["last_updated"] = TODAY
         data["meta"]["total_sessions"] = data["meta"].get("total_sessions", 0) + 1
