@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-04",
-    "total_sessions": 25,
+    "total_sessions": 26,
     "schema_version": "1.0",
     "domain_colors": {
       "ai-ml": "#43aa8b",
@@ -358,11 +358,11 @@
       "label": "Git",
       "type": "skill",
       "domain": "systems",
-      "score": 7,
+      "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 5,
+      "session_count": 1,
       "history": [
         {
           "date": "2026-03-28",
@@ -371,6 +371,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 8
         }
       ],
       "connections": [
@@ -590,11 +594,11 @@
       "label": "Vercel",
       "type": "tool",
       "domain": "web",
-      "score": 8,
+      "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 5,
+      "session_count": 1,
       "history": [
         {
           "date": "2026-03-28",
@@ -607,6 +611,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 9
         }
       ],
       "connections": [
@@ -1751,8 +1759,8 @@
     },
     {
       "id": "next-js",
-      "score": 7,
-      "session_count": 4,
+      "score": 8,
+      "session_count": 1,
       "last_updated": "2026-04-03",
       "label": "Next.js",
       "type": "tool",
@@ -1769,6 +1777,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 8
         }
       ]
     },
@@ -1905,7 +1917,7 @@
       "label": "Debugging",
       "type": "skill",
       "domain": "systems",
-      "score": 6,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-03",
       "last_updated": "2026-04-03",
@@ -1914,6 +1926,10 @@
         {
           "date": "2026-04-03",
           "score": 6
+        },
+        {
+          "date": "2026-04-04",
+          "score": 8
         }
       ],
       "connections": [
