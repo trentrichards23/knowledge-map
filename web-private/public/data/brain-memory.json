@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-03",
-    "total_sessions": 20,
+    "total_sessions": 21,
     "schema_version": "1.0",
     "visibility": "private",
     "domain_colors": {
@@ -1010,11 +1010,11 @@
       "label": "Git",
       "type": "skill",
       "domain": "systems",
-      "score": 8,
+      "score": 7,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 12,
+      "session_count": 5,
       "history": [
         {
           "date": "2026-03-28",
@@ -1332,11 +1332,11 @@
       "label": "Vercel",
       "type": "tool",
       "domain": "web",
-      "score": 9,
+      "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 16,
+      "session_count": 5,
       "history": [
         {
           "date": "2026-03-28",
@@ -2677,6 +2677,27 @@
       ],
       "connections": [
         "domain-personal"
+      ]
+    },
+    {
+      "id": "debugging",
+      "label": "Debugging",
+      "type": "skill",
+      "domain": "systems",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "vercel",
+        "git"
       ]
     }
   ]
