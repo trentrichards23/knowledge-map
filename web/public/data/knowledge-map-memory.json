@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-03",
-    "total_sessions": 15,
+    "total_sessions": 16,
     "schema_version": "1.0",
     "domain_colors": {
       "ai-ml": "#43aa8b",
@@ -196,11 +196,11 @@
       "label": "Python",
       "type": "skill",
       "domain": "ai-ml",
-      "score": 8,
+      "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 28,
+      "session_count": 24,
       "history": [
         {
           "date": "2026-03-28",
@@ -231,11 +231,11 @@
       "label": "TypeScript",
       "type": "skill",
       "domain": "web",
-      "score": 9,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 42,
+      "session_count": 13,
       "history": [
         {
           "date": "2026-03-28",
@@ -263,11 +263,11 @@
       "label": "React",
       "type": "skill",
       "domain": "web",
-      "score": 7,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 4,
+      "session_count": 15,
       "history": [
         {
           "date": "2026-03-28",
@@ -295,11 +295,11 @@
       "label": "Next.js",
       "type": "skill",
       "domain": "web",
-      "score": 6,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 4,
+      "session_count": 16,
       "history": [
         {
           "date": "2026-03-28",
@@ -331,11 +331,15 @@
       "score": 5,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "session_count": 4,
       "history": [
         {
           "date": "2026-03-28",
+          "score": 5
+        },
+        {
+          "date": "2026-04-03",
           "score": 5
         }
       ],
@@ -350,11 +354,11 @@
       "label": "Git",
       "type": "skill",
       "domain": "systems",
-      "score": 4,
+      "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 12,
       "history": [
         {
           "date": "2026-03-28",
@@ -401,11 +405,11 @@
       "label": "Web Scraping",
       "type": "skill",
       "domain": "ai-ml",
-      "score": 6,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-01",
-      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "session_count": 14,
       "history": [
         {
           "date": "2026-03-28",
@@ -414,6 +418,10 @@
         {
           "date": "2026-04-01",
           "score": 6
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -427,11 +435,11 @@
       "label": "D3.js",
       "type": "skill",
       "domain": "web",
-      "score": 4,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-02",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 11,
       "history": [
         {
           "date": "2026-04-02",
@@ -481,11 +489,11 @@
       "label": "Ollama",
       "type": "tool",
       "domain": "ai-ml",
-      "score": 6,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-04-01",
-      "last_updated": "2026-04-02",
-      "session_count": 3,
+      "last_updated": "2026-04-03",
+      "session_count": 15,
       "history": [
         {
           "date": "2026-04-01",
@@ -494,6 +502,10 @@
         {
           "date": "2026-04-02",
           "score": 6
+        },
+        {
+          "date": "2026-04-03",
+          "score": 9
         }
       ],
       "connections": [
@@ -508,11 +520,11 @@
       "label": "Groq API",
       "type": "tool",
       "domain": "ai-ml",
-      "score": 5,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-01",
-      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "session_count": 13,
       "history": [
         {
           "date": "2026-03-28",
@@ -521,6 +533,10 @@
         {
           "date": "2026-04-01",
           "score": 5
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -534,11 +550,11 @@
       "label": "Alpaca API",
       "type": "tool",
       "domain": "trading",
-      "score": 6,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 4,
+      "last_updated": "2026-04-03",
+      "session_count": 12,
       "history": [
         {
           "date": "2026-03-28",
@@ -547,6 +563,10 @@
         {
           "date": "2026-04-02",
           "score": 6
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -562,11 +582,11 @@
       "label": "Vercel",
       "type": "tool",
       "domain": "web",
-      "score": 7,
+      "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 3,
+      "session_count": 16,
       "history": [
         {
           "date": "2026-03-28",
@@ -593,11 +613,11 @@
       "label": "Cloudflare DNS",
       "type": "tool",
       "domain": "web",
-      "score": 6,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-02",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 10,
       "history": [
         {
           "date": "2026-04-02",
@@ -645,11 +665,11 @@
       "label": "ffmpeg",
       "type": "tool",
       "domain": "video",
-      "score": 4,
+      "score": 5,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 4,
       "history": [
         {
           "date": "2026-03-28",
@@ -672,11 +692,11 @@
       "label": "yt-dlp",
       "type": "tool",
       "domain": "video",
-      "score": 4,
+      "score": 5,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 4,
       "history": [
         {
           "date": "2026-03-28",
@@ -698,11 +718,11 @@
       "label": "Whisper (ASR)",
       "type": "tool",
       "domain": "ai-ml",
-      "score": 4,
+      "score": 7,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 9,
       "history": [
         {
           "date": "2026-03-28",
@@ -725,15 +745,19 @@
       "label": "Docker",
       "type": "tool",
       "domain": "systems",
-      "score": 3,
+      "score": 8,
       "proficiency": "novice",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 11,
       "history": [
         {
           "date": "2026-03-28",
           "score": 3
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -768,11 +792,11 @@
       "label": "LLM Prompt Engineering",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 6,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 5,
+      "last_updated": "2026-04-03",
+      "session_count": 29,
       "history": [
         {
           "date": "2026-03-28",
@@ -781,6 +805,10 @@
         {
           "date": "2026-04-02",
           "score": 6
+        },
+        {
+          "date": "2026-04-03",
+          "score": 9
         }
       ],
       "connections": [
@@ -797,11 +825,11 @@
       "label": "Multi-Agent Systems",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 5,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 3,
+      "last_updated": "2026-04-03",
+      "session_count": 14,
       "history": [
         {
           "date": "2026-03-28",
@@ -810,6 +838,10 @@
         {
           "date": "2026-04-02",
           "score": 5
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -824,15 +856,19 @@
       "label": "RAG",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 3,
+      "score": 7,
       "proficiency": "novice",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-02",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 9,
       "history": [
         {
           "date": "2026-04-02",
           "score": 3
+        },
+        {
+          "date": "2026-04-03",
+          "score": 7
         }
       ],
       "connections": [
@@ -846,15 +882,19 @@
       "label": "Bracket Orders / GTC",
       "type": "concept",
       "domain": "trading",
-      "score": 6,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-02",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 11,
       "history": [
         {
           "date": "2026-04-02",
           "score": 6
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -869,11 +909,11 @@
       "label": "Paper Trading",
       "type": "concept",
       "domain": "trading",
-      "score": 5,
+      "score": 7,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 3,
+      "last_updated": "2026-04-03",
+      "session_count": 7,
       "history": [
         {
           "date": "2026-03-28",
@@ -882,6 +922,10 @@
         {
           "date": "2026-04-02",
           "score": 5
+        },
+        {
+          "date": "2026-04-03",
+          "score": 7
         }
       ],
       "connections": [
@@ -896,11 +940,11 @@
       "label": "AI Memory Systems",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 6,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-31",
-      "last_updated": "2026-04-02",
-      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "session_count": 16,
       "history": [
         {
           "date": "2026-03-31",
@@ -909,6 +953,10 @@
         {
           "date": "2026-04-02",
           "score": 6
+        },
+        {
+          "date": "2026-04-03",
+          "score": 9
         }
       ],
       "connections": [
@@ -924,15 +972,19 @@
       "label": "Knowledge Graphs",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 4,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-02",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 11,
       "history": [
         {
           "date": "2026-04-02",
           "score": 4
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -947,11 +999,11 @@
       "label": "Cron / Scheduled Tasks",
       "type": "concept",
       "domain": "systems",
-      "score": 5,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 2,
+      "last_updated": "2026-04-03",
+      "session_count": 15,
       "history": [
         {
           "date": "2026-03-28",
@@ -960,6 +1012,10 @@
         {
           "date": "2026-04-02",
           "score": 5
+        },
+        {
+          "date": "2026-04-03",
+          "score": 9
         }
       ],
       "connections": [
@@ -976,11 +1032,15 @@
       "score": 6,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 6,
       "history": [
         {
           "date": "2026-03-28",
+          "score": 6
+        },
+        {
+          "date": "2026-04-03",
           "score": 6
         }
       ],
@@ -994,15 +1054,19 @@
       "label": "Business Strategy",
       "type": "concept",
       "domain": "strategy",
-      "score": 7,
+      "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-03-28",
-      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "session_count": 11,
       "history": [
         {
           "date": "2026-03-28",
           "score": 7
+        },
+        {
+          "date": "2026-04-03",
+          "score": 8
         }
       ],
       "connections": [
@@ -1209,11 +1273,11 @@
       "label": "CSS Animations",
       "type": "skill",
       "domain": "web",
-      "score": 4,
+      "score": 6,
       "proficiency": "working",
       "first_seen": "2026-04-02",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 6,
       "history": [
         {
           "date": "2026-04-02",
@@ -1264,7 +1328,7 @@
       "label": "UI / UX Design",
       "type": "concept",
       "domain": "web",
-      "score": 7,
+      "score": 5,
       "proficiency": "novice",
       "first_seen": "2026-04-02",
       "last_updated": "2026-04-03",
@@ -1291,11 +1355,11 @@
       "label": "GitHub API",
       "type": "tool",
       "domain": "systems",
-      "score": 4,
+      "score": 6,
       "proficiency": "working",
       "first_seen": "2026-04-03",
       "last_updated": "2026-04-03",
-      "session_count": 1,
+      "session_count": 6,
       "history": [
         {
           "date": "2026-04-03",
@@ -1317,7 +1381,7 @@
       "proficiency": "working",
       "first_seen": "2026-02-12",
       "last_updated": "2026-04-03",
-      "session_count": 19,
+      "session_count": 9,
       "history": [
         {
           "date": "2026-04-03",
@@ -1333,11 +1397,11 @@
       "label": "Product Strategy",
       "type": "concept",
       "domain": "strategy",
-      "score": 6,
+      "score": 5,
       "proficiency": "working",
       "first_seen": "2026-02-14",
       "last_updated": "2026-04-03",
-      "session_count": 11,
+      "session_count": 3,
       "history": [
         {
           "date": "2026-04-03",
@@ -1413,11 +1477,11 @@
       "label": "AI Agents",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 6,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-02-27",
       "last_updated": "2026-04-03",
-      "session_count": 9,
+      "session_count": 14,
       "history": [
         {
           "date": "2026-04-03",
@@ -1453,7 +1517,7 @@
       "label": "Fine-Tuning",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 4,
+      "score": 5,
       "proficiency": "working",
       "first_seen": "2026-02-15",
       "last_updated": "2026-04-03",
@@ -1473,11 +1537,11 @@
       "label": "Linux / Bash",
       "type": "skill",
       "domain": "systems",
-      "score": 7,
+      "score": 9,
       "proficiency": "working",
       "first_seen": "2026-02-14",
       "last_updated": "2026-04-03",
-      "session_count": 13,
+      "session_count": 18,
       "history": [
         {
           "date": "2026-04-03",
@@ -1517,7 +1581,7 @@
       "proficiency": "working",
       "first_seen": "2026-02-14",
       "last_updated": "2026-04-03",
-      "session_count": 10,
+      "session_count": 6,
       "history": [
         {
           "date": "2026-04-03",
@@ -1573,11 +1637,11 @@
       "label": "Competitive Intelligence",
       "type": "concept",
       "domain": "strategy",
-      "score": 4,
+      "score": 7,
       "proficiency": "working",
       "first_seen": "2026-02-15",
       "last_updated": "2026-04-03",
-      "session_count": 2,
+      "session_count": 8,
       "history": [
         {
           "date": "2026-04-03",
@@ -1597,7 +1661,7 @@
       "proficiency": "working",
       "first_seen": "2026-02-17",
       "last_updated": "2026-04-03",
-      "session_count": 4,
+      "session_count": 3,
       "history": [
         {
           "date": "2026-04-03",
@@ -1690,6 +1754,126 @@
           "date": "2026-04-03",
           "score": 7
         }
+      ]
+    },
+    {
+      "id": "cold-email",
+      "label": "Cold Email",
+      "type": "skill",
+      "domain": "strategy",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 14,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "freelancing",
+      "label": "Freelancing",
+      "type": "skill",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 8,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "lead-generation",
+      "label": "Lead Generation",
+      "type": "skill",
+      "domain": "strategy",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 12,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "label": "E-Commerce",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 9,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "seo",
+      "label": "SEO",
+      "type": "concept",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 9,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "fastapi",
+      "label": "FastAPI",
+      "type": "tool",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "working",
+      "first_seen": "2026-04-03",
+      "last_updated": "2026-04-03",
+      "session_count": 3,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "domain-web"
       ]
     }
   ]
