@@ -1,1 +1,178 @@
-../../web/app/globals.css
+@import "tailwindcss";
+
+:root {
+  --bg: #080808;
+  --surface: #111111;
+  --border: #1e1e1e;
+  --text: #e8e8e8;
+  --text-muted: #666666;
+
+  /* domain colors — match portfolio accent palette */
+  --color-ai-ml: #d3968c;
+  --color-trading: #839958;
+  --color-web: #4a9db5;
+  --color-video: #7a6e9c;
+  --color-strategy: #c4a35a;
+  --color-systems: #6e8c7a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* graph fills its container */
+.graph-svg {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+.graph-svg:active {
+  cursor: grabbing;
+}
+
+/* tooltip */
+.graph-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  width: 190px;
+  z-index: 100;
+}
+.graph-tooltip .tt-label {
+  font-weight: 600;
+  color: #e8e8e8;
+  margin-bottom: 2px;
+}
+.graph-tooltip .tt-type {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555;
+  margin-bottom: 6px;
+}
+.graph-tooltip .tt-proficiency {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+.graph-tooltip .tt-score-row {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+.graph-tooltip .tt-score-val {
+  font-size: 11px;
+  color: #777;
+}
+.graph-tooltip .tt-battery {
+  display: flex;
+  gap: 3px;
+  margin-top: 8px;
+}
+.graph-tooltip .tt-seg {
+  flex: 1;
+  height: 10px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.08);
+}
+.graph-tooltip .tt-seg-on {
+  opacity: 0.85;
+}
+
+/* Flip clock date display */
+.flip-wrap {
+  perspective: 300px;
+}
+.flip-card {
+  position: relative;
+  background: #181818;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.flip-seam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+@keyframes flip-card-out {
+  from { transform: rotateX(0deg);   opacity: 1;   }
+  to   { transform: rotateX(-90deg); opacity: 0.2; }
+}
+@keyframes flip-card-in {
+  from { transform: rotateX(90deg);  opacity: 0.2; }
+  to   { transform: rotateX(0deg);   opacity: 1;   }
+}
+.flip-out { animation: flip-card-out 0.1s ease-in  forwards; }
+.flip-in  { animation: flip-card-in  0.1s ease-out forwards; }
+
+/* Timeline scrubber — vertical */
+.timeline-slider-v {
+  -webkit-appearance: slider-vertical;
+  appearance: slider-vertical;
+  writing-mode: vertical-lr;
+  width: 14px;
+  height: 180px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: inset 0 2px 12px rgba(0,0,0,0.85), inset 0 0 6px rgba(0,0,0,0.5);
+  accent-color: white;
+}
+.timeline-slider-v::-webkit-slider-runnable-track {
+  background: transparent;
+  border-radius: 8px;
+}
+.timeline-slider-v::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  cursor: grab;
+  transition: transform 0.15s ease;
+}
+.timeline-slider-v::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.2);
+}
+.timeline-slider-v::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  cursor: grab;
+}
