@@ -10,7 +10,7 @@ function computeDistances(nodes: KnowledgeNode[]): Map<string, number> {
   const adj = new Map<string, Set<string>>()
   for (const n of nodes) adj.set(n.id, new Set())
   for (const n of nodes) {
-    for (const c of n.connections) {
+    for (const c of (n.connections ?? [])) {
       adj.get(n.id)?.add(c)
       adj.get(c)?.add(n.id) // undirected
     }
@@ -61,7 +61,7 @@ function buildLinks(nodes: KnowledgeNode[]): SimLink[] {
   const links: SimLink[] = []
 
   for (const node of nodes) {
-    for (const targetId of node.connections) {
+    for (const targetId of (node.connections ?? [])) {
       if (!nodeIds.has(targetId)) continue // skip broken references
       const key = [node.id, targetId].sort().join('--')
       if (seen.has(key)) continue

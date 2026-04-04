@@ -171,6 +171,10 @@ def apply_diffs(diff_path: str):
                     continue
                 if not isinstance(update.get("history"), list):
                     update["history"] = []
+                if not isinstance(update.get("connections"), list):
+                    update["connections"] = []
+                if not update.get("proficiency"):
+                    update["proficiency"] = "learning"
                 data["nodes"].append(update)
         data["meta"]["last_updated"] = TODAY
         data["meta"]["total_sessions"] = data["meta"].get("total_sessions", 0) + 1
