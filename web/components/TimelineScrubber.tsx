@@ -59,27 +59,12 @@ export default function TimelineScrubber({
     ((maxTs - dateToTs(d)) / (maxTs - minTs)) * 100
 
   return (
-    <div className="absolute right-6 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-3">
       {/* Flip clock date display */}
       <FlipDate value={formatDate(currentDate)} />
 
-      {/* Track + ticks + thumb */}
+      {/* Track + thumb */}
       <div className="relative flex items-center justify-center" style={{ height: 180, width: 24 }}>
-        {dateTicks.map(tick => (
-          <div
-            key={tick}
-            className="absolute pointer-events-none"
-            style={{
-              top: `${tickTopPct(tick)}%`,
-              width: 6,
-              height: 1,
-              background: dateToTs(tick) <= curTs
-                ? 'rgba(255,255,255,0.45)'
-                : 'rgba(255,255,255,0.1)',
-            }}
-          />
-        ))}
-
         <input
           type="range"
           min={minTs}

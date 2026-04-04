@@ -283,10 +283,12 @@ export default function KnowledgeGraph({ nodes, currentDate, activeFilter, selec
             <div class="tt-type">${d.type}</div>
             <div class="tt-proficiency" style="color:${profColor}">${d.proficiency}</div>
             <div class="tt-score-row">
-              <span class="tt-score-val">${d.score}/10</span>
-              <div class="tt-score-track">
-                <div class="tt-score-fill" style="width:${d.score * 10}%;background:${profColor}"></div>
-              </div>
+              <span class="tt-score-val">${d.score * 10}%</span>
+            </div>
+            <div class="tt-battery">
+              ${Array.from({length: 33}, (_, i) =>
+                `<div class="tt-seg${i < Math.round(d.score / 10 * 33) ? ' tt-seg-on' : ''}" style="${i < Math.round(d.score / 10 * 33) ? `background:${profColor}` : ''}"></div>`
+              ).join('')}
             </div>
           `)
       })

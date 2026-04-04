@@ -114,14 +114,22 @@ export default function NodeDetailPanel({ node, allNodes, domainColors, onClose 
               >
                 {node.proficiency}
               </span>
-              <span className="text-xs text-white/30">{node.score} / 10</span>
+              <span className="text-xs text-white/30">{node.score * 10}%</span>
             </div>
-            {/* Score bar */}
-            <div className="h-1 rounded-full bg-white/10 overflow-hidden">
-              <div
-                className="h-full rounded-full transition-all duration-500"
-                style={{ width: `${node.score * 10}%`, background: domainColor }}
-              />
+            {/* Segmented battery bar */}
+            <div className="flex gap-[3px] mt-1">
+              {Array.from({ length: 33 }, (_, i) => (
+                <div
+                  key={i}
+                  className="flex-1 h-[8px] rounded-[2px]"
+                  style={{
+                    background: i < Math.round(node.score / 10 * 33)
+                      ? domainColor
+                      : 'rgba(255,255,255,0.08)',
+                    opacity: i < Math.round(node.score / 10 * 33) ? 0.85 : 1,
+                  }}
+                />
+              ))}
             </div>
           </div>
 

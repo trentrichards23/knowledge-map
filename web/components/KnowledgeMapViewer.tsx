@@ -28,8 +28,9 @@ interface Props {
 
 export default function KnowledgeMapViewer({ nodes, lastUpdated, domainColors }: Props) {
   const minDate = useMemo(() =>
-    nodes.reduce((min, n) => n.first_seen < min ? n.first_seen : min, nodes[0].first_seen)
-  , [nodes])
+    nodes.length === 0 ? lastUpdated :
+    nodes.reduce((min, n) => (n.first_seen ?? lastUpdated) < min ? (n.first_seen ?? lastUpdated) : min, nodes[0].first_seen ?? lastUpdated)
+  , [nodes, lastUpdated])
 
   const dateTicks = useMemo(() =>
     [...new Set(nodes.map(n => n.first_seen))].sort()
@@ -85,26 +86,29 @@ export default function KnowledgeMapViewer({ nodes, lastUpdated, domainColors }:
         onNodeClick={setSelectedNode}
         onBackgroundClick={() => setSelectedNode(null)}
       />
-      <LegendFilter
-        activeFilter={activeFilter}
-        domains={domainEntries}
-        nodeCounts={nodeCounts}
-        onFilter={setActiveFilter}
-      />
+      {/* Right column: legend on top, scrubber below */}
+      <div className="absolute right-6 top-1/2 -translate-y-1/2 z-10 flex flex-col items-end gap-6">
+        <LegendFilter
+          activeFilter={activeFilter}
+          domains={domainEntries}
+          nodeCounts={nodeCounts}
+          onFilter={setActiveFilter}
+        />
+        <TimelineScrubber
+          minDate={minDate}
+          maxDate={lastUpdated}
+          currentDate={currentDate}
+          activeCount={activeCount}
+          totalCount={nodes.length}
+          dateTicks={dateTicks}
+          onChange={setCurrentDate}
+        />
+      </div>
       <NodeDetailPanel
         node={selectedNode}
         allNodes={nodes}
         domainColors={resolvedColors}
         onClose={() => setSelectedNode(null)}
-      />
-      <TimelineScrubber
-        minDate={minDate}
-        maxDate={lastUpdated}
-        currentDate={currentDate}
-        activeCount={activeCount}
-        totalCount={nodes.length}
-        dateTicks={dateTicks}
-        onChange={setCurrentDate}
       />
     </>
   )

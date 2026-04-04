@@ -12,19 +12,17 @@ export default function Page() {
 
   return (
     <main className="w-full h-full relative">
-      {/* Header — sits above the graph */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-6 py-4 pointer-events-none">
-        <div>
-          <h1 className="text-sm font-semibold text-white/80 tracking-wide">
-            Knowledge Map
-          </h1>
-          <p className="text-xs text-white/30 mt-0.5">
-            last updated {data.meta.last_updated}
-          </p>
-        </div>
+      {/* Title — centered */}
+      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-center px-6 py-4 pointer-events-none">
+        <h1 className="text-sm font-semibold text-white/80 tracking-wide">
+          Knowledge Map
+        </h1>
+      </div>
+      {/* Back link — top right */}
+      <div className="absolute top-4 right-6 z-10">
         <a
           href="https://trentbrichards.com"
-          className="pointer-events-auto text-xs text-white/30 hover:text-white/60 transition-colors"
+          className="text-xs text-white/30 hover:text-white/60 transition-colors"
         >
           ← trentbrichards.com
         </a>

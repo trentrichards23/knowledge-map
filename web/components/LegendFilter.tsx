@@ -15,7 +15,7 @@ interface Props {
 
 export default function LegendFilter({ activeFilter, domains, nodeCounts, onFilter }: Props) {
   return (
-    <div className="absolute left-5 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-1">
+    <div className="flex flex-col gap-1">
       {/* Domain filters */}
       <div className="flex flex-col gap-1">
         {/* "All" reset button */}
