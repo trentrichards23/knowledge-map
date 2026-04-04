@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-04",
-    "total_sessions": 22,
+    "total_sessions": 23,
     "schema_version": "1.0",
     "domain_colors": {
       "ai-ml": "#43aa8b",
@@ -199,8 +199,8 @@
       "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 24,
+      "last_updated": "2026-04-04",
+      "session_count": 12,
       "history": [
         {
           "date": "2026-03-28",
@@ -213,6 +213,10 @@
         {
           "date": "2026-04-03",
           "score": 8
+        },
+        {
+          "date": "2026-04-04",
+          "score": 9
         }
       ],
       "connections": [
@@ -1715,9 +1719,9 @@
     {
       "id": "resume-writing",
       "score": 7,
-      "proficiency": "proficient",
-      "session_count": 2,
-      "last_updated": "2026-04-03",
+      "proficiency": "fluent",
+      "session_count": 3,
+      "last_updated": "2026-04-04",
       "label": "Resume Writing",
       "type": "skill",
       "domain": "strategy",
@@ -1729,6 +1733,10 @@
       "history": [
         {
           "date": "2026-04-03",
+          "score": 7
+        },
+        {
+          "date": "2026-04-04",
           "score": 7
         }
       ]
