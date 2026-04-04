@@ -2,7 +2,7 @@
   "meta": {
     "owner": "Trenton Richards",
     "last_updated": "2026-04-04",
-    "total_sessions": 26,
+    "total_sessions": 27,
     "schema_version": "1.0",
     "domain_colors": {
       "ai-ml": "#43aa8b",
@@ -267,11 +267,11 @@
       "label": "React",
       "type": "skill",
       "domain": "web",
-      "score": 9,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-04-03",
-      "session_count": 15,
+      "session_count": 1,
       "history": [
         {
           "date": "2026-03-28",
@@ -284,6 +284,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 8
         }
       ],
       "connections": [
