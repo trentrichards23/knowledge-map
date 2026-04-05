@@ -2732,6 +2732,58 @@
         "vercel",
         "git"
       ]
+    },
+    {
+      "id": "resume-writing",
+      "score": 7,
+      "proficiency": "fluent",
+      "session_count": 3,
+      "last_updated": "2026-04-04",
+      "label": "Resume Writing",
+      "type": "skill",
+      "domain": "strategy",
+      "first_seen": "2026-04-03",
+      "connections": [
+        "job-search",
+        "cold-email"
+      ],
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 7
+        }
+      ]
+    },
+    {
+      "id": "next-js",
+      "score": 8,
+      "session_count": 1,
+      "last_updated": "2026-04-03",
+      "label": "Next.js",
+      "type": "tool",
+      "domain": "web",
+      "first_seen": "2026-04-03",
+      "proficiency": "working",
+      "connections": [
+        "react",
+        "vercel",
+        "portfolio-website",
+        "knowledge-map-project"
+      ],
+      "history": [
+        {
+          "date": "2026-04-03",
+          "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 8
+        }
+      ]
     }
   ]
 }
