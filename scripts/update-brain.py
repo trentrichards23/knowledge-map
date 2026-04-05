@@ -176,8 +176,10 @@ def apply_diffs(diff_path: str):
                 if not update.get("proficiency"):
                     update["proficiency"] = "learning"
                 data["nodes"].append(update)
+        # Only bump session count if this is the first apply today
+        if data["meta"].get("last_updated") != TODAY:
+            data["meta"]["total_sessions"] = data["meta"].get("total_sessions", 0) + 1
         data["meta"]["last_updated"] = TODAY
-        data["meta"]["total_sessions"] = data["meta"].get("total_sessions", 0) + 1
         return data
 
     def apply_connections(data, connections):
@@ -224,7 +226,7 @@ def apply_diffs(diff_path: str):
 
     commit_to_github(public_data, private_data, diff.get("session_summary", "Session update"), synced)
 
-# ── Step 6: Commit via GitHub API ─────────────────────────────────────────────
+# ── Step 6: Commit via GitHub API (atomic, using Git Trees) ──────────────────
 
 def github_api(endpoint: str, method: str, token: str, body: dict = None):
     url = f"https://api.github.com{endpoint}"
@@ -241,47 +243,68 @@ def github_api(endpoint: str, method: str, token: str, body: dict = None):
     with urllib.request.urlopen(req) as resp:
         return json.loads(resp.read())
 
-def get_file_sha(path: str, token: str) -> str:
-    result = github_api(f"/repos/{REPO}/contents/{path}", "GET", token)
-    return result["sha"]
-
-def commit_file(path: str, content: str, sha: str, message: str, token: str):
-    encoded = base64.b64encode(content.encode()).decode()
-    github_api(f"/repos/{REPO}/contents/{path}", "PUT", token, {
-        "message": message,
-        "content": encoded,
-        "sha": sha,
-    })
-    print(f"✓ Committed {path}")
-
 def commit_to_github(public_data: dict, private_data: dict, summary: str, ui_files: list = None):
+    """Atomic commit of all changed files using the Git Trees API."""
     token = load_token()
     message = f"brain update {TODAY}: {summary[:60]}"
-
-    public_content  = json.dumps(public_data, indent=2)
-    private_content = json.dumps(private_data, indent=2)
-
     repo_root = Path(__file__).parent.parent
 
+    # Collect all files to commit: (repo_path, content_string)
+    files_to_commit = [
+        (PUBLIC_PATH,  json.dumps(public_data, indent=2)),
+        (PRIVATE_PATH, json.dumps(private_data, indent=2)),
+    ]
+    for rel_path in (ui_files or []):
+        full_path = repo_root / rel_path
+        if full_path.exists():
+            files_to_commit.append((rel_path, full_path.read_text(encoding="utf-8")))
+
     try:
-        public_sha  = get_file_sha(PUBLIC_PATH, token)
-        private_sha = get_file_sha(PRIVATE_PATH, token)
-        commit_file(PUBLIC_PATH,  public_content,  public_sha,  message, token)
-        commit_file(PRIVATE_PATH, private_content, private_sha, message, token)
+        # 1. Get the current commit SHA on main
+        ref = github_api(f"/repos/{REPO}/git/ref/heads/main", "GET", token)
+        base_commit_sha = ref["object"]["sha"]
+        commit = github_api(f"/repos/{REPO}/git/commits/{base_commit_sha}", "GET", token)
+        base_tree_sha = commit["tree"]["sha"]
 
-        for rel_path in (ui_files or []):
-            full_path = repo_root / rel_path
-            if not full_path.exists():
-                continue
-            try:
-                sha = get_file_sha(rel_path, token)
-                commit_file(rel_path, full_path.read_text(encoding="utf-8"), sha, message, token)
-            except urllib.error.HTTPError as e:
-                print(f"⚠ Could not commit {rel_path}: {e.code} {e.reason}")
+        # 2. Create blobs for each file
+        tree_entries = []
+        for file_path, content in files_to_commit:
+            blob = github_api(f"/repos/{REPO}/git/blobs", "POST", token, {
+                "content": content,
+                "encoding": "utf-8",
+            })
+            tree_entries.append({
+                "path": file_path,
+                "mode": "100644",
+                "type": "blob",
+                "sha": blob["sha"],
+            })
+            print(f"  ✓ Staged {file_path}")
 
-        print(f"\n✓ Both files committed to GitHub — Vercel will rebuild automatically")
+        # 3. Create a new tree with all changes
+        new_tree = github_api(f"/repos/{REPO}/git/trees", "POST", token, {
+            "base_tree": base_tree_sha,
+            "tree": tree_entries,
+        })
+
+        # 4. Create a single commit pointing to the new tree
+        new_commit = github_api(f"/repos/{REPO}/git/commits", "POST", token, {
+            "message": message,
+            "tree": new_tree["sha"],
+            "parents": [base_commit_sha],
+        })
+
+        # 5. Update the ref to point to the new commit
+        github_api(f"/repos/{REPO}/git/refs/heads/main", "PATCH", token, {
+            "sha": new_commit["sha"],
+        })
+
+        print(f"\n✓ Atomic commit ({len(files_to_commit)} files) pushed to GitHub — Vercel will rebuild")
     except urllib.error.HTTPError as e:
+        body = e.read().decode() if hasattr(e, 'read') else ""
         print(f"ERROR committing to GitHub: {e.code} {e.reason}")
+        if body:
+            print(f"  {body[:200]}")
         print("Make sure GITHUB_TOKEN is set and has write access to the repo.")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
