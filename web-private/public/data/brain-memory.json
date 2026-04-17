@@ -852,8 +852,8 @@
       "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-04",
-      "session_count": 12,
+      "last_updated": "2026-04-16",
+      "session_count": 13,
       "history": [
         {
           "date": "2026-03-28",
@@ -869,6 +869,10 @@
         },
         {
           "date": "2026-04-04",
+          "score": 9
+        },
+        {
+          "date": "2026-04-16",
           "score": 9
         }
       ],
@@ -1253,8 +1257,8 @@
       "score": 9,
       "proficiency": "working",
       "first_seen": "2026-04-01",
-      "last_updated": "2026-04-03",
-      "session_count": 15,
+      "last_updated": "2026-04-16",
+      "session_count": 16,
       "history": [
         {
           "date": "2026-04-01",
@@ -1266,6 +1270,10 @@
         },
         {
           "date": "2026-04-03",
+          "score": 9
+        },
+        {
+          "date": "2026-04-16",
           "score": 9
         }
       ],
@@ -1634,11 +1642,11 @@
       "label": "RAG",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 7,
+      "score": 8,
       "proficiency": "novice",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-03",
-      "session_count": 9,
+      "last_updated": "2026-04-16",
+      "session_count": 10,
       "history": [
         {
           "date": "2026-04-02",
@@ -1647,6 +1655,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-16",
+          "score": 8
         }
       ],
       "connections": [
@@ -2325,15 +2337,19 @@
       "label": "SQLite",
       "type": "tool",
       "domain": "systems",
-      "score": 4,
+      "score": 6,
       "proficiency": "working",
       "first_seen": "2026-02-15",
-      "last_updated": "2026-04-03",
-      "session_count": 2,
+      "last_updated": "2026-04-16",
+      "session_count": 3,
       "history": [
         {
           "date": "2026-04-03",
           "score": 4
+        },
+        {
+          "date": "2026-04-16",
+          "score": 6
         }
       ],
       "connections": [
@@ -2807,6 +2823,168 @@
           "date": "2026-04-04",
           "score": 8
         }
+      ]
+    },
+    {
+      "id": "sqlite-vec",
+      "label": "sqlite-vec",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "sqlite",
+        "rag",
+        "vector-search",
+        "embeddings"
+      ]
+    },
+    {
+      "id": "embeddings",
+      "label": "Embeddings",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "rag",
+        "ollama",
+        "vector-search",
+        "sqlite-vec"
+      ]
+    },
+    {
+      "id": "vector-search",
+      "label": "Vector Search",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "rag",
+        "embeddings",
+        "sqlite-vec"
+      ]
+    },
+    {
+      "id": "claude-code-hooks",
+      "label": "Claude Code Hooks",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "python",
+        "rag",
+        "vault-rag",
+        "session-summarizer"
+      ]
+    },
+    {
+      "id": "local-llms",
+      "label": "Local LLMs",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "ollama",
+        "rag",
+        "embeddings"
+      ]
+    },
+    {
+      "id": "vault-rag",
+      "label": "Vault RAG",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "rag",
+        "embeddings",
+        "sqlite-vec",
+        "ollama",
+        "claude-code-hooks",
+        "python"
+      ]
+    },
+    {
+      "id": "session-summarizer",
+      "label": "Session Summarizer",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "ollama",
+        "local-llms",
+        "claude-code-hooks",
+        "vault-rag",
+        "python"
       ]
     }
   ]
