@@ -901,7 +901,7 @@
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-05-13",
-      "session_count": 16,
+      "session_count": 17,
       "history": [
         {
           "date": "2026-03-28",
@@ -938,7 +938,7 @@
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-05-13",
-      "session_count": 15,
+      "session_count": 16,
       "history": [
         {
           "date": "2026-03-28",
@@ -975,7 +975,7 @@
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-05-13",
-      "session_count": 19,
+      "session_count": 20,
       "history": [
         {
           "date": "2026-03-28",
@@ -1009,11 +1009,11 @@
       "label": "Tailwind CSS",
       "type": "skill",
       "domain": "web",
-      "score": 7,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
       "last_updated": "2026-05-13",
-      "session_count": 7,
+      "session_count": 8,
       "history": [
         {
           "date": "2026-03-28",
@@ -1229,7 +1229,7 @@
       "proficiency": "novice",
       "first_seen": "2026-04-02",
       "last_updated": "2026-05-13",
-      "session_count": 6,
+      "session_count": 7,
       "history": [
         {
           "date": "2026-04-02",
@@ -1390,7 +1390,7 @@
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
       "last_updated": "2026-05-13",
-      "session_count": 14,
+      "session_count": 15,
       "history": [
         {
           "date": "2026-03-28",
@@ -3143,6 +3143,31 @@
         "nextjs",
         "portfolio-website",
         "ui-ux-design"
+      ]
+    },
+    {
+      "id": "apex-dryer-vents",
+      "label": "Apex Dryer Vents",
+      "type": "project",
+      "domain": "web",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-05-13",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "nextjs",
+        "typescript",
+        "react",
+        "tailwind",
+        "vercel",
+        "domain-web"
       ]
     }
   ]
