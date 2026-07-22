@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """
+RETIRED 2026-07-21 — memory no longer derives from the brain. Do not run.
+Memory files at ~/.claude/projects/-Users-trentonrichards/memory/ are hand-owned;
+the vault (~/Documents/my-vault) + RAG injection is the source of truth for
+project status. The brain JSONs now feed the websites only.
+
 sync-brain-to-memory.py — Derive Claude memory files from brain-memory.json
 
 Usage:
@@ -133,6 +138,7 @@ write_file(memory_dir / "user_profile.md", user_profile)
 
 PRESERVED_FILES = {
     "feedback_api_keys.md",
+    "feedback_claude_code_hooks.md",
     "reference_vault.md",
     "reference_remote_terminal.md",
 }
@@ -201,7 +207,7 @@ static_entries = [
     ("reference_vault.md",           "Vault Location",           "Obsidian vault at ~/Documents/my-vault with projects, journal, notes"),
     ("reference_remote_terminal.md", "Remote Terminal Setup",    "Tailscale + tmux + Termius stack for iPhone → Mac terminal access. Mac IP: 100.98.168.37"),
     ("feedback_api_keys.md",         "Feedback: API Keys",       "Never suggest ANTHROPIC_API_KEY in env/files; Pro plan via claude.ai only"),
-    ("project_status_ref.md",        "Project Status Tracker",   "Live sprint tracker at ~/Documents/my-vault/Projects/PROJECT-STATUS.md"),
+    ("feedback_claude_code_hooks.md","Feedback: Hook Events",    "Stop fires per-turn, not per-session — use SessionEnd for once-per-session LLM hooks"),
 ]
 
 # Build project lines from generated files

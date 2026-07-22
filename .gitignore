@@ -9,3 +9,6 @@ web/.env*.local
 # Logs
 *.log
 web-private-tmp/
+
+# Local vault-it scratch (retired workflow)
+scripts/diff.json

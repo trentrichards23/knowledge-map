@@ -1,8 +1,8 @@
 {
   "meta": {
     "owner": "Trenton Richards",
-    "last_updated": "2026-04-04",
-    "total_sessions": 27,
+    "last_updated": "2026-05-21",
+    "total_sessions": 33,
     "schema_version": "1.0",
     "visibility": "private",
     "domain_colors": {
@@ -17,7 +17,8 @@
       "interests": "#f72585",
       "network": "#7b9e87",
       "health-fitness": "#5ba05b",
-      "personal-finance": "#7b9fc4"
+      "personal-finance": "#7b9fc4",
+      "marketing": "#f3722c"
     }
   },
   "nodes": [
@@ -327,7 +328,7 @@
         "goal-skills",
         "interest-gym"
       ],
-      "notes": "Core operating philosophy. Constant improvement across all domains \u2014 physical, mental, financial, social. Not aspirational, actually lived.",
+      "notes": "Core operating philosophy. Constant improvement across all domains — physical, mental, financial, social. Not aspirational, actually lived.",
       "visibility": "private"
     },
     {
@@ -377,7 +378,7 @@
         "interest-gym",
         "ui-ux-design"
       ],
-      "notes": "Believes aesthetics are important in all areas \u2014 physical appearance, design, environments. Has a good eye, developing the technical ability to match.",
+      "notes": "Believes aesthetics are important in all areas — physical appearance, design, environments. Has a good eye, developing the technical ability to match.",
       "visibility": "private"
     },
     {
@@ -427,7 +428,7 @@
         "goal-entrepreneurship",
         "goal-investing"
       ],
-      "notes": "Short term: enough cash flow to support a leisure lifestyle as a single young adult \u2014 eat well, travel occasionally, upgrade wardrobe. Not extravagant, just free. Currently dependent on parents which he dislikes.",
+      "notes": "Short term: enough cash flow to support a leisure lifestyle as a single young adult — eat well, travel occasionally, upgrade wardrobe. Not extravagant, just free. Currently dependent on parents which he dislikes.",
       "visibility": "private"
     },
     {
@@ -505,7 +506,7 @@
         "domain-web",
         "belief-growth"
       ],
-      "notes": "Learning as many skills as possible, especially software creation and AI fluency. Urgent \u2014 internship search, semester ends May 2026.",
+      "notes": "Learning as many skills as possible, especially software creation and AI fluency. Urgent — internship search, semester ends May 2026.",
       "visibility": "private"
     },
     {
@@ -624,7 +625,7 @@
         "domain-interests",
         "interest-outdoors"
       ],
-      "notes": "Winter sport of choice. Lives in Utah \u2014 good access.",
+      "notes": "Winter sport of choice. Lives in Utah — good access.",
       "visibility": "private"
     },
     {
@@ -672,7 +673,7 @@
         "interest-outdoors",
         "interest-gym"
       ],
-      "notes": "Basketball, pickleball, running \u2014 just about any sport or physical activity. Social and competitive.",
+      "notes": "Basketball, pickleball, running — just about any sport or physical activity. Social and competitive.",
       "visibility": "private"
     },
     {
@@ -720,7 +721,7 @@
         "goal-travel",
         "goal-financial-freedom"
       ],
-      "notes": "Wants to travel \u2014 currently constrained by college student finances.",
+      "notes": "Wants to travel — currently constrained by college student finances.",
       "visibility": "private"
     },
     {
@@ -849,11 +850,11 @@
       "label": "Python",
       "type": "skill",
       "domain": "ai-ml",
-      "score": 9,
+      "score": 10,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 24,
+      "last_updated": "2026-05-21",
+      "session_count": 38,
       "history": [
         {
           "date": "2026-03-28",
@@ -866,6 +867,22 @@
         {
           "date": "2026-04-03",
           "score": 8
+        },
+        {
+          "date": "2026-04-04",
+          "score": 9
+        },
+        {
+          "date": "2026-04-16",
+          "score": 9
+        },
+        {
+          "date": "2026-04-19",
+          "score": 9
+        },
+        {
+          "date": "2026-05-21",
+          "score": 10
         }
       ],
       "connections": [
@@ -888,8 +905,8 @@
       "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 13,
+      "last_updated": "2026-05-13",
+      "session_count": 17,
       "history": [
         {
           "date": "2026-03-28",
@@ -902,6 +919,10 @@
         {
           "date": "2026-04-03",
           "score": 6
+        },
+        {
+          "date": "2026-05-13",
+          "score": 8
         }
       ],
       "connections": [
@@ -921,8 +942,8 @@
       "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 15,
+      "last_updated": "2026-05-13",
+      "session_count": 16,
       "history": [
         {
           "date": "2026-03-28",
@@ -935,6 +956,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-05-13",
+          "score": 9
         }
       ],
       "connections": [
@@ -954,8 +979,8 @@
       "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 16,
+      "last_updated": "2026-05-13",
+      "session_count": 20,
       "history": [
         {
           "date": "2026-03-28",
@@ -968,6 +993,10 @@
         {
           "date": "2026-04-03",
           "score": 6
+        },
+        {
+          "date": "2026-05-13",
+          "score": 9
         }
       ],
       "connections": [
@@ -985,11 +1014,11 @@
       "label": "Tailwind CSS",
       "type": "skill",
       "domain": "web",
-      "score": 5,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 4,
+      "last_updated": "2026-05-13",
+      "session_count": 8,
       "history": [
         {
           "date": "2026-03-28",
@@ -998,6 +1027,10 @@
         {
           "date": "2026-04-03",
           "score": 5
+        },
+        {
+          "date": "2026-05-13",
+          "score": 7
         }
       ],
       "connections": [
@@ -1012,11 +1045,11 @@
       "label": "Git",
       "type": "skill",
       "domain": "systems",
-      "score": 8,
+      "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 1,
+      "last_updated": "2026-05-13",
+      "session_count": 13,
       "history": [
         {
           "date": "2026-03-28",
@@ -1029,6 +1062,10 @@
         {
           "date": "2026-04-04",
           "score": 8
+        },
+        {
+          "date": "2026-05-13",
+          "score": 9
         }
       ],
       "connections": [
@@ -1132,11 +1169,11 @@
       "label": "CSS Animations",
       "type": "skill",
       "domain": "web",
-      "score": 6,
+      "score": 7,
       "proficiency": "working",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-03",
-      "session_count": 6,
+      "last_updated": "2026-05-13",
+      "session_count": 8,
       "history": [
         {
           "date": "2026-04-02",
@@ -1145,6 +1182,10 @@
         {
           "date": "2026-04-03",
           "score": 4
+        },
+        {
+          "date": "2026-05-13",
+          "score": 7
         }
       ],
       "connections": [
@@ -1189,11 +1230,11 @@
       "label": "UI / UX Design",
       "type": "concept",
       "domain": "web",
-      "score": 5,
+      "score": 6,
       "proficiency": "novice",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-03",
-      "session_count": 3,
+      "last_updated": "2026-05-13",
+      "session_count": 7,
       "history": [
         {
           "date": "2026-04-02",
@@ -1202,6 +1243,10 @@
         {
           "date": "2026-04-03",
           "score": 3
+        },
+        {
+          "date": "2026-05-13",
+          "score": 6
         }
       ],
       "connections": [
@@ -1249,8 +1294,8 @@
       "score": 9,
       "proficiency": "working",
       "first_seen": "2026-04-01",
-      "last_updated": "2026-04-03",
-      "session_count": 15,
+      "last_updated": "2026-04-16",
+      "session_count": 16,
       "history": [
         {
           "date": "2026-04-01",
@@ -1262,6 +1307,10 @@
         },
         {
           "date": "2026-04-03",
+          "score": 9
+        },
+        {
+          "date": "2026-04-16",
           "score": 9
         }
       ],
@@ -1345,8 +1394,8 @@
       "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-03",
-      "session_count": 1,
+      "last_updated": "2026-05-13",
+      "session_count": 15,
       "history": [
         {
           "date": "2026-03-28",
@@ -1362,6 +1411,10 @@
         },
         {
           "date": "2026-04-04",
+          "score": 9
+        },
+        {
+          "date": "2026-05-13",
           "score": 9
         }
       ],
@@ -1630,11 +1683,11 @@
       "label": "RAG",
       "type": "concept",
       "domain": "ai-ml",
-      "score": 7,
+      "score": 8,
       "proficiency": "novice",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-03",
-      "session_count": 9,
+      "last_updated": "2026-04-16",
+      "session_count": 10,
       "history": [
         {
           "date": "2026-04-02",
@@ -1643,6 +1696,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-16",
+          "score": 8
         }
       ],
       "connections": [
@@ -1720,8 +1777,8 @@
       "score": 9,
       "proficiency": "working",
       "first_seen": "2026-03-31",
-      "last_updated": "2026-04-03",
-      "session_count": 16,
+      "last_updated": "2026-04-04",
+      "session_count": 6,
       "history": [
         {
           "date": "2026-03-31",
@@ -1733,6 +1790,10 @@
         },
         {
           "date": "2026-04-03",
+          "score": 9
+        },
+        {
+          "date": "2026-04-04",
           "score": 9
         }
       ],
@@ -1864,8 +1925,8 @@
       "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 4,
+      "last_updated": "2026-04-04",
+      "session_count": 5,
       "history": [
         {
           "date": "2026-03-28",
@@ -1873,6 +1934,10 @@
         },
         {
           "date": "2026-04-02",
+          "score": 8
+        },
+        {
+          "date": "2026-04-04",
           "score": 8
         }
       ],
@@ -1886,7 +1951,9 @@
         "llm-prompting",
         "bash",
         "cron-jobs",
-        "domain-trading"
+        "domain-trading",
+        "risk-management",
+        "alpaca"
       ],
       "visibility": "public"
     },
@@ -1921,11 +1988,11 @@
       "label": "Portfolio Website",
       "type": "project",
       "domain": "web",
-      "score": 8,
+      "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-03-28",
-      "last_updated": "2026-04-02",
-      "session_count": 2,
+      "last_updated": "2026-05-13",
+      "session_count": 6,
       "history": [
         {
           "date": "2026-03-28",
@@ -1934,6 +2001,10 @@
         {
           "date": "2026-04-02",
           "score": 8
+        },
+        {
+          "date": "2026-05-13",
+          "score": 9
         }
       ],
       "connections": [
@@ -2024,11 +2095,11 @@
       "label": "Knowledge Map",
       "type": "project",
       "domain": "ai-ml",
-      "score": 8,
+      "score": 9,
       "proficiency": "fluent",
       "first_seen": "2026-04-02",
-      "last_updated": "2026-04-03",
-      "session_count": 3,
+      "last_updated": "2026-04-04",
+      "session_count": 8,
       "history": [
         {
           "date": "2026-04-02",
@@ -2037,6 +2108,10 @@
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 9
         }
       ],
       "connections": [
@@ -2125,15 +2200,19 @@
       "label": "n8n",
       "type": "tool",
       "domain": "systems",
-      "score": 8,
+      "score": 7,
       "proficiency": "fluent",
       "first_seen": "2026-02-14",
-      "last_updated": "2026-04-03",
-      "session_count": 21,
+      "last_updated": "2026-05-21",
+      "session_count": 6,
       "history": [
         {
           "date": "2026-04-03",
           "score": 8
+        },
+        {
+          "date": "2026-05-21",
+          "score": 7
         }
       ],
       "connections": [
@@ -2245,15 +2324,19 @@
       "label": "Linux / Bash",
       "type": "skill",
       "domain": "systems",
-      "score": 9,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-02-14",
-      "last_updated": "2026-04-03",
-      "session_count": 18,
+      "last_updated": "2026-04-04",
+      "session_count": 10,
       "history": [
         {
           "date": "2026-04-03",
           "score": 7
+        },
+        {
+          "date": "2026-04-04",
+          "score": 8
         }
       ],
       "connections": [
@@ -2285,15 +2368,19 @@
       "label": "HTML / CSS",
       "type": "skill",
       "domain": "web",
-      "score": 6,
+      "score": 7,
       "proficiency": "working",
       "first_seen": "2026-02-14",
-      "last_updated": "2026-04-03",
-      "session_count": 6,
+      "last_updated": "2026-05-13",
+      "session_count": 8,
       "history": [
         {
           "date": "2026-04-03",
           "score": 6
+        },
+        {
+          "date": "2026-05-13",
+          "score": 7
         }
       ],
       "connections": [
@@ -2305,15 +2392,19 @@
       "label": "SQLite",
       "type": "tool",
       "domain": "systems",
-      "score": 4,
+      "score": 6,
       "proficiency": "working",
       "first_seen": "2026-02-15",
-      "last_updated": "2026-04-03",
-      "session_count": 2,
+      "last_updated": "2026-04-16",
+      "session_count": 3,
       "history": [
         {
           "date": "2026-04-03",
           "score": 4
+        },
+        {
+          "date": "2026-04-16",
+          "score": 6
         }
       ],
       "connections": [
@@ -2593,15 +2684,19 @@
       "label": "Financial Independence",
       "type": "goal",
       "domain": "personal-finance",
-      "score": 5,
+      "score": 8,
       "proficiency": "working",
       "first_seen": "2026-04-03",
-      "last_updated": "2026-04-03",
-      "session_count": 4,
+      "last_updated": "2026-05-21",
+      "session_count": 9,
       "history": [
         {
           "date": "2026-04-03",
           "score": 5
+        },
+        {
+          "date": "2026-05-21",
+          "score": 8
         }
       ],
       "connections": [
@@ -2656,11 +2751,15 @@
       "score": 8,
       "proficiency": "fluent",
       "first_seen": "2026-04-03",
-      "last_updated": "2026-04-03",
-      "session_count": 12,
+      "last_updated": "2026-04-04",
+      "session_count": 5,
       "history": [
         {
           "date": "2026-04-03",
+          "score": 8
+        },
+        {
+          "date": "2026-04-04",
           "score": 8
         }
       ],
@@ -2783,6 +2882,380 @@
           "date": "2026-04-04",
           "score": 8
         }
+      ]
+    },
+    {
+      "id": "sqlite-vec",
+      "label": "sqlite-vec",
+      "type": "tool",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "sqlite",
+        "rag",
+        "vector-search",
+        "embeddings"
+      ]
+    },
+    {
+      "id": "embeddings",
+      "label": "Embeddings",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "rag",
+        "ollama",
+        "vector-search",
+        "sqlite-vec"
+      ]
+    },
+    {
+      "id": "vector-search",
+      "label": "Vector Search",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 6,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "rag",
+        "embeddings",
+        "sqlite-vec"
+      ]
+    },
+    {
+      "id": "claude-code-hooks",
+      "label": "Claude Code Hooks",
+      "type": "skill",
+      "domain": "ai-ml",
+      "score": 7,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "python",
+        "rag",
+        "vault-rag",
+        "session-summarizer"
+      ]
+    },
+    {
+      "id": "local-llms",
+      "label": "Local LLMs",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "ollama",
+        "rag",
+        "embeddings"
+      ]
+    },
+    {
+      "id": "vault-rag",
+      "label": "Vault RAG",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "rag",
+        "embeddings",
+        "sqlite-vec",
+        "ollama",
+        "claude-code-hooks",
+        "python"
+      ]
+    },
+    {
+      "id": "session-summarizer",
+      "label": "Session Summarizer",
+      "type": "project",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "fluent",
+      "first_seen": "2026-04-16",
+      "last_updated": "2026-04-16",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "ollama",
+        "local-llms",
+        "claude-code-hooks",
+        "vault-rag",
+        "python"
+      ]
+    },
+    {
+      "id": "alpaca",
+      "label": "Alpaca Trading API",
+      "type": "tool",
+      "domain": "finance",
+      "score": 7,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-19",
+      "last_updated": "2026-04-19",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "python",
+        "autotrader",
+        "trading"
+      ]
+    },
+    {
+      "id": "trading",
+      "label": "Algorithmic Trading",
+      "type": "concept",
+      "domain": "finance",
+      "score": 6,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-19",
+      "last_updated": "2026-04-19",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "python",
+        "alpaca",
+        "autotrader",
+        "risk-management"
+      ]
+    },
+    {
+      "id": "risk-management",
+      "label": "Risk Management",
+      "type": "concept",
+      "domain": "finance",
+      "score": 6,
+      "proficiency": "comfortable",
+      "first_seen": "2026-04-19",
+      "last_updated": "2026-04-19",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "trading",
+        "autotrader"
+      ]
+    },
+    {
+      "id": "framer-motion",
+      "label": "Framer Motion",
+      "type": "tool",
+      "domain": "web",
+      "score": 7,
+      "proficiency": "working",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "session_count": 3,
+      "history": [
+        {
+          "date": "2026-05-13",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "react",
+        "nextjs",
+        "portfolio-website",
+        "css-animations"
+      ]
+    },
+    {
+      "id": "simple-icons",
+      "label": "simple-icons",
+      "type": "tool",
+      "domain": "web",
+      "score": 5,
+      "proficiency": "comfortable",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-05-13",
+          "score": 5
+        }
+      ],
+      "connections": [
+        "react",
+        "nextjs",
+        "portfolio-website",
+        "ui-ux-design"
+      ]
+    },
+    {
+      "id": "apex-dryer-vents",
+      "label": "Apex Dryer Vents",
+      "type": "project",
+      "domain": "web",
+      "score": 6,
+      "proficiency": "working",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-05-13",
+          "score": 6
+        }
+      ],
+      "connections": [
+        "nextjs",
+        "typescript",
+        "react",
+        "tailwind",
+        "vercel",
+        "domain-web"
+      ]
+    },
+    {
+      "id": "market-research",
+      "label": "Market Research",
+      "type": "skill",
+      "domain": "strategy",
+      "score": 7,
+      "proficiency": "competent",
+      "first_seen": "2026-05-20",
+      "last_updated": "2026-05-21",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-05-20",
+          "score": 6
+        },
+        {
+          "date": "2026-05-21",
+          "score": 7
+        }
+      ],
+      "connections": [
+        "python",
+        "claude-skills",
+        "business-strategy",
+        "domain-strategy"
+      ]
+    },
+    {
+      "id": "affiliate-marketing",
+      "label": "Affiliate Marketing",
+      "type": "concept",
+      "domain": "marketing",
+      "score": 4,
+      "proficiency": "learning",
+      "first_seen": "2026-05-21",
+      "last_updated": "2026-05-21",
+      "session_count": 1,
+      "history": [
+        {
+          "date": "2026-05-21",
+          "score": 4
+        }
+      ],
+      "connections": [
+        "market-research",
+        "domain-marketing"
+      ]
+    },
+    {
+      "id": "multi-agent-research",
+      "label": "Multi-Agent Research Orchestration",
+      "type": "concept",
+      "domain": "ai-ml",
+      "score": 8,
+      "proficiency": "working",
+      "first_seen": "2026-05-20",
+      "last_updated": "2026-05-21",
+      "session_count": 2,
+      "history": [
+        {
+          "date": "2026-05-20",
+          "score": 7
+        },
+        {
+          "date": "2026-05-21",
+          "score": 8
+        }
+      ],
+      "connections": [
+        "claude-skills",
+        "python",
+        "ollama",
+        "domain-ai"
       ]
     }
   ]
